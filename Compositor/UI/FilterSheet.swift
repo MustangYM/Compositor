@@ -22,90 +22,90 @@ struct FilterSheet: View {
             case .curves:
                 CurvesControls(settings: Binding(get: { settings.curves }, set: { new in update { $0.curves = new } }))
             case .exposure:
-                control("Exposure", \.exposure.exposure, range: ExposureSettings.exposureRange, unit: "", decimals: 2, logarithmic: false)
-                control("Offset", \.exposure.offset, range: ExposureSettings.offsetRange, unit: "", decimals: 4, logarithmic: false)
-                control("Gamma", \.exposure.gamma, range: ExposureSettings.gammaRange, unit: "", decimals: 2, logarithmic: true)
+                control(L10n.tr("Exposure"), \.exposure.exposure, range: ExposureSettings.exposureRange, unit: "", decimals: 2, logarithmic: false)
+                control(L10n.tr("Offset"), \.exposure.offset, range: ExposureSettings.offsetRange, unit: "", decimals: 4, logarithmic: false)
+                control(L10n.tr("Gamma"), \.exposure.gamma, range: ExposureSettings.gammaRange, unit: "", decimals: 2, logarithmic: true)
             case .gradientMap:
                 GradientMapControls(settings: Binding(get: { settings.gradientMap }, set: { new in update { $0.gradientMap = new } }),
                                     pick: { session.openGradientMapColorPicker(highlights: $0) })
             case .blackWhite:
                 // Each slider says how bright that family of colors becomes, as Photoshop's do.
-                control("Reds", \.blackWhite.reds, range: BlackWhiteSettings.range, unit: "%", decimals: 0, logarithmic: false, track: .luminance(0))
-                control("Yellows", \.blackWhite.yellows, range: BlackWhiteSettings.range, unit: "%", decimals: 0, logarithmic: false, track: .luminance(60))
-                control("Greens", \.blackWhite.greens, range: BlackWhiteSettings.range, unit: "%", decimals: 0, logarithmic: false, track: .luminance(120))
-                control("Cyans", \.blackWhite.cyans, range: BlackWhiteSettings.range, unit: "%", decimals: 0, logarithmic: false, track: .luminance(180))
-                control("Blues", \.blackWhite.blues, range: BlackWhiteSettings.range, unit: "%", decimals: 0, logarithmic: false, track: .luminance(240))
-                control("Magentas", \.blackWhite.magentas, range: BlackWhiteSettings.range, unit: "%", decimals: 0, logarithmic: false, track: .luminance(300))
-                Toggle("Tint", isOn: flag(\.blackWhite.tint))
-                    .help("Color the result while keeping its tones, for a sepia or a cyanotype")
+                control(L10n.tr("Reds"), \.blackWhite.reds, range: BlackWhiteSettings.range, unit: L10n.tr("%"), decimals: 0, logarithmic: false, track: .luminance(0))
+                control(L10n.tr("Yellows"), \.blackWhite.yellows, range: BlackWhiteSettings.range, unit: L10n.tr("%"), decimals: 0, logarithmic: false, track: .luminance(60))
+                control(L10n.tr("Greens"), \.blackWhite.greens, range: BlackWhiteSettings.range, unit: L10n.tr("%"), decimals: 0, logarithmic: false, track: .luminance(120))
+                control(L10n.tr("Cyans"), \.blackWhite.cyans, range: BlackWhiteSettings.range, unit: L10n.tr("%"), decimals: 0, logarithmic: false, track: .luminance(180))
+                control(L10n.tr("Blues"), \.blackWhite.blues, range: BlackWhiteSettings.range, unit: L10n.tr("%"), decimals: 0, logarithmic: false, track: .luminance(240))
+                control(L10n.tr("Magentas"), \.blackWhite.magentas, range: BlackWhiteSettings.range, unit: L10n.tr("%"), decimals: 0, logarithmic: false, track: .luminance(300))
+                Toggle(L10n.tr("Tint"), isOn: flag(\.blackWhite.tint))
+                    .help(L10n.tr("Color the result while keeping its tones, for a sepia or a cyanotype"))
                 if settings.blackWhite.tint {
-                    control("Hue", \.blackWhite.tintHue, range: 0...360, unit: "°", decimals: 0, logarithmic: false, track: .plain)
-                    control("Saturation", \.blackWhite.tintSaturation, range: 0...100, unit: "%", decimals: 0, logarithmic: false,
+                    control(L10n.tr("Hue"), \.blackWhite.tintHue, range: 0...360, unit: L10n.tr("°"), decimals: 0, logarithmic: false, track: .plain)
+                    control(L10n.tr("Saturation"), \.blackWhite.tintSaturation, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false,
                             track: .saturation(settings.blackWhite.tintHue))
                 }
             case .cameraRaw:
                 CameraRawControls(session: session)
                     .frame(maxHeight: .infinity, alignment: .top)
             case .colorBalance:
-                Text("Shadows").font(.headline)
-                control("Cyan / Red", \.colorBalance.shadowCyanRed, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.cyanRedTrack)
-                control("Magenta / Green", \.colorBalance.shadowMagentaGreen, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.magentaGreenTrack)
-                control("Yellow / Blue", \.colorBalance.shadowYellowBlue, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.yellowBlueTrack)
-                Text("Midtones").font(.headline)
-                control("Cyan / Red", \.colorBalance.midCyanRed, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.cyanRedTrack)
-                control("Magenta / Green", \.colorBalance.midMagentaGreen, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.magentaGreenTrack)
-                control("Yellow / Blue", \.colorBalance.midYellowBlue, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.yellowBlueTrack)
-                Text("Highlights").font(.headline)
-                control("Cyan / Red", \.colorBalance.highlightCyanRed, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.cyanRedTrack)
-                control("Magenta / Green", \.colorBalance.highlightMagentaGreen, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.magentaGreenTrack)
-                control("Yellow / Blue", \.colorBalance.highlightYellowBlue, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.yellowBlueTrack)
-                Toggle("Preserve Luminosity", isOn: flag(\.colorBalance.preserveLuminosity))
-                    .help("Put each pixel's brightness back afterwards, so only the color moves")
+                Text(L10n.tr("Shadows")).font(.headline)
+                control(L10n.tr("Cyan / Red"), \.colorBalance.shadowCyanRed, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.cyanRedTrack)
+                control(L10n.tr("Magenta / Green"), \.colorBalance.shadowMagentaGreen, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.magentaGreenTrack)
+                control(L10n.tr("Yellow / Blue"), \.colorBalance.shadowYellowBlue, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.yellowBlueTrack)
+                Text(L10n.tr("Midtones")).font(.headline)
+                control(L10n.tr("Cyan / Red"), \.colorBalance.midCyanRed, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.cyanRedTrack)
+                control(L10n.tr("Magenta / Green"), \.colorBalance.midMagentaGreen, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.magentaGreenTrack)
+                control(L10n.tr("Yellow / Blue"), \.colorBalance.midYellowBlue, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.yellowBlueTrack)
+                Text(L10n.tr("Highlights")).font(.headline)
+                control(L10n.tr("Cyan / Red"), \.colorBalance.highlightCyanRed, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.cyanRedTrack)
+                control(L10n.tr("Magenta / Green"), \.colorBalance.highlightMagentaGreen, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.magentaGreenTrack)
+                control(L10n.tr("Yellow / Blue"), \.colorBalance.highlightYellowBlue, range: ColorBalanceSettings.range, unit: "", decimals: 0, logarithmic: false, track: Self.yellowBlueTrack)
+                Toggle(L10n.tr("Preserve Luminosity"), isOn: flag(\.colorBalance.preserveLuminosity))
+                    .help(L10n.tr("Put each pixel's brightness back afterwards, so only the color moves"))
             case .grain:
-                control("Amount", \.grain.amount, range: GrainSettings.amountRange, unit: "", decimals: 0, logarithmic: false)
-                control("Size", \.grain.size, range: GrainSettings.sizeRange, unit: "px", decimals: 1, logarithmic: true)
-                control("Roughness", \.grain.roughness, range: GrainSettings.roughnessRange, unit: "", decimals: 0, logarithmic: false)
+                control(L10n.tr("Amount"), \.grain.amount, range: GrainSettings.amountRange, unit: "", decimals: 0, logarithmic: false)
+                control(L10n.tr("Size"), \.grain.size, range: GrainSettings.sizeRange, unit: L10n.tr("px"), decimals: 1, logarithmic: true)
+                control(L10n.tr("Roughness"), \.grain.roughness, range: GrainSettings.roughnessRange, unit: "", decimals: 0, logarithmic: false)
             case .removeBackground:
-                Text("Hide the background behind a layer mask, keeping the foreground subjects. The pixels stay, so the background can be painted back at any time.")
+                Text(L10n.tr("Hide the background behind a layer mask, keeping the foreground subjects. The pixels stay, so the background can be painted back at any time."))
                     .fixedSize(horizontal: false, vertical: true)
-                Picker("Quality", selection: Binding(get: { settings.backgroundQuality },
+                Picker(L10n.tr("Quality"), selection: Binding(get: { settings.backgroundQuality },
                                                      set: { new in update { $0.backgroundQuality = new } })) {
-                    ForEach(BackgroundQuality.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                    ForEach(BackgroundQuality.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
                 }
                 .pickerStyle(.segmented).labelsHidden()
-                .help("Basic is quick; Advanced refines the mask against the layer's own detail, for hair and fur")
+                .help(L10n.tr("Basic is quick; Advanced refines the mask against the layer's own detail, for hair and fur"))
                 if settings.backgroundQuality == .advanced {
-                    control("Refine", \.refineEdges, range: 0...40, unit: "px", decimals: 0, logarithmic: false)
-                        .help("Pull the mask onto the image's own edges, which recovers hair and fur")
-                    control("Contrast", \.matteContrast, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                        .help("Clear the haze that leaves background showing through thin areas")
-                    control("Shift Edge", \.shiftEdge, range: -10...10, unit: "px", decimals: 0, logarithmic: false)
-                        .help("Shrink the mask to drop the rim of background color around the subject, or grow it")
+                    control(L10n.tr("Refine"), \.refineEdges, range: 0...40, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
+                        .help(L10n.tr("Pull the mask onto the image's own edges, which recovers hair and fur"))
+                    control(L10n.tr("Contrast"), \.matteContrast, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                        .help(L10n.tr("Clear the haze that leaves background showing through thin areas"))
+                    control(L10n.tr("Shift Edge"), \.shiftEdge, range: -10...10, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
+                        .help(L10n.tr("Shrink the mask to drop the rim of background color around the subject, or grow it"))
                 }
             case .contentAwareFill:
-                Text("Fill the selection using surrounding pixels from this layer.")
+                Text(L10n.tr("Fill the selection using surrounding pixels from this layer."))
                     .fixedSize(horizontal: false, vertical: true)
             case .gaussianBlur:
-                control("Radius", \.radius, range: 0.1...250, unit: "px", decimals: 1, logarithmic: true)
+                control(L10n.tr("Radius"), \.radius, range: 0.1...250, unit: L10n.tr("px"), decimals: 1, logarithmic: true)
             case .motionBlur:
-                control("Angle", \.angle, range: -90...90, unit: "°", decimals: 0, logarithmic: false)
-                control("Distance", \.distance, range: 1...2000, unit: "px", decimals: 0, logarithmic: true)
+                control(L10n.tr("Angle"), \.angle, range: -90...90, unit: L10n.tr("°"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Distance"), \.distance, range: 1...2000, unit: L10n.tr("px"), decimals: 0, logarithmic: true)
             case .addNoise:
-                control("Amount", \.amount, range: 0.1...400, unit: "%", decimals: 1, logarithmic: true)
+                control(L10n.tr("Amount"), \.amount, range: 0.1...400, unit: L10n.tr("%"), decimals: 1, logarithmic: true)
                 HStack(spacing: 10) {
-                    Text("Distribution")
-                    Picker("Distribution", selection: flag(\.gaussian)) {
-                        Text("Uniform").tag(false)
-                        Text("Gaussian").tag(true)
+                    Text(L10n.tr("Distribution"))
+                    Picker(L10n.tr("Distribution"), selection: flag(\.gaussian)) {
+                        Text(L10n.tr("Uniform")).tag(false)
+                        Text(L10n.tr("Gaussian")).tag(true)
                     }
                     .pickerStyle(.segmented).labelsHidden()
                 }
-                Toggle("Monochromatic", isOn: flag(\.monochromatic))
+                Toggle(L10n.tr("Monochromatic"), isOn: flag(\.monochromatic))
             case .dither:
                 ditherControls
             case .vignette:
                 HStack(spacing: 8) {
-                    Text("Color").frame(width: 95, alignment: .leading)
+                    Text(L10n.tr("Color")).frame(minWidth: 95, alignment: .leading)
                     Button { session.openVignetteColorPicker() } label: {
                         let shape = RoundedRectangle(cornerRadius: 6, style: .continuous)
                         shape.fill(Color(.sRGB, red: settings.vignetteColor.red,
@@ -116,41 +116,41 @@ struct FilterSheet: View {
                             .contentShape(shape)
                     }
                     .buttonStyle(.plain)
-                    .help("Choose the vignette color")
+                    .help(L10n.tr("Choose the vignette color"))
                     Spacer()
                 }
-                control("Amount", \.vignetteAmount, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                    .help("Blend the chosen color into the edges while keeping the center unchanged")
-                control("Midpoint", \.vignetteMidpoint, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Roundness", \.vignetteRoundness, range: -100...100, unit: "", decimals: 0, logarithmic: false)
-                control("Feather", \.vignetteFeather, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Highlights", \.vignetteHighlights, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                    .help("Protect bright areas near the edge")
+                control(L10n.tr("Amount"), \.vignetteAmount, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                    .help(L10n.tr("Blend the chosen color into the edges while keeping the center unchanged"))
+                control(L10n.tr("Midpoint"), \.vignetteMidpoint, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Roundness"), \.vignetteRoundness, range: -100...100, unit: "", decimals: 0, logarithmic: false)
+                control(L10n.tr("Feather"), \.vignetteFeather, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Highlights"), \.vignetteHighlights, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                    .help(L10n.tr("Protect bright areas near the edge"))
             case .bloomGlow:
-                control("Amount", \.bloomAmount, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Radius", \.bloomRadius, range: 1...150, unit: "px", decimals: 0, logarithmic: true)
+                control(L10n.tr("Amount"), \.bloomAmount, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Radius"), \.bloomRadius, range: 1...150, unit: L10n.tr("px"), decimals: 0, logarithmic: true)
             case .tonalContrast:
-                control("Amount", \.tonalAmount, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Shadows", \.tonalShadows, range: -100...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Midtones", \.tonalMidtones, range: -100...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Highlights", \.tonalHighlights, range: -100...100, unit: "%", decimals: 0, logarithmic: false)
-                control("Radius", \.tonalRadius, range: 1...100, unit: "px", decimals: 0, logarithmic: true)
+                control(L10n.tr("Amount"), \.tonalAmount, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Shadows"), \.tonalShadows, range: -100...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Midtones"), \.tonalMidtones, range: -100...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Highlights"), \.tonalHighlights, range: -100...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                control(L10n.tr("Radius"), \.tonalRadius, range: 1...100, unit: L10n.tr("px"), decimals: 0, logarithmic: true)
             case .lensCorrection:
-                control("Remove Distortion", \.distortion, range: -100...100, unit: "", decimals: 0, logarithmic: false)
-                Text("Positive straightens lines that bow outward (barrel); negative, lines that bow inward (pincushion).")
+                control(L10n.tr("Remove Distortion"), \.distortion, range: -100...100, unit: "", decimals: 0, logarithmic: false)
+                Text(L10n.tr("Positive straightens lines that bow outward (barrel); negative, lines that bow inward (pincushion)."))
                     .font(.callout).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
             }
-            Toggle("Preview", isOn: Binding(get: { edit?.preview ?? true },
+            Toggle(L10n.tr("Preview"), isOn: Binding(get: { edit?.preview ?? true },
                                             set: { session.updateFilter(settings, preview: $0) }))
             if let error = edit?.previewError {
                 Text(error).foregroundStyle(.orange).fixedSize(horizontal: false, vertical: true)
             }
             if session.adjustmentOriginal == nil && session.selection != nil {
-                Text("Limited to the selection").font(.callout).foregroundStyle(.secondary)
+                Text(L10n.tr("Limited to the selection")).font(.callout).foregroundStyle(.secondary)
             }
             Divider()
             HStack {
-                Button("Cancel") { session.cancelFilter() }.configuredNativeShortcut(.escape)
+                Button(L10n.tr("Cancel")) { session.cancelFilter() }.configuredNativeShortcut(.escape)
                 Spacer()
                 // While the preview is being worked out (Remove Background's mask, Content-Aware Fill) OK waits, so
                 // the panel says what it is waiting for rather than showing a disabled button and nothing else.
@@ -158,10 +158,10 @@ struct FilterSheet: View {
                 // make the panel flicker as it grows and shrinks.
                 if edit?.committing == true || (edit?.preparing == true && edit?.kind.isAutomatic == true) {
                     ProgressView().controlSize(.small)
-                    Text(edit?.committing == true ? "Applying…" : "Working…")
+                    Text(edit?.committing == true ? L10n.tr("Applying…") : L10n.tr("Working…"))
                         .font(.callout).foregroundStyle(.secondary)
                 }
-                Button("OK") { Task { await session.commitFilter() } }
+                Button(L10n.tr("OK")) { Task { await session.commitFilter() } }
                     .configuredNativeShortcut(.return).buttonStyle(.borderedProminent)
                     .disabled(edit?.kind.isAutomatic == true && (edit?.preparing == true || edit?.previewError != nil))
             }
@@ -183,80 +183,80 @@ struct FilterSheet: View {
 
     @ViewBuilder private var ditherControls: some View {
         let dither = settings.dither
-        Picker("Style", selection: Binding(get: { dither.style }, set: { new in update { $0.dither.style = new } })) {
+        Picker(L10n.tr("Style"), selection: Binding(get: { dither.style }, set: { new in update { $0.dither.style = new } })) {
             ForEach(DitherStyle.groups.indices, id: \.self) { group in
                 if group > 0 { Divider() }
-                ForEach(DitherStyle.groups[group], id: \.self) { Text($0.rawValue).tag($0) }
+                ForEach(DitherStyle.groups[group], id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
             }
         }
         if dither.style.usesPixelSize {
-        control("Pixel Size", \.dither.pixelSize, range: DitherSettings.pixelSizeRange, unit: "px", decimals: 0, logarithmic: false)
-            .help("Make each dithered pixel this many pixels across, for a chunky old-screen look")
+        control(L10n.tr("Pixel Size"), \.dither.pixelSize, range: DitherSettings.pixelSizeRange, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
+            .help(L10n.tr("Make each dithered pixel this many pixels across, for a chunky old-screen look"))
         }
         if dither.style == .ascii {
-            control("Text Size", \.dither.textSize, range: DitherSettings.textSizeRange, unit: "px", decimals: 0, logarithmic: false)
-                .help("The height of each line of characters")
+            control(L10n.tr("Text Size"), \.dither.textSize, range: DitherSettings.textSizeRange, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
+                .help(L10n.tr("The height of each line of characters"))
         }
         if dither.style == .scanlines {
-            control("Line Spacing", \.dither.lineSpacing, range: DitherSettings.lineSpacingRange, unit: "px", decimals: 0, logarithmic: false)
-                .help("How far apart the screen's lines are")
-            control("Glow", \.dither.glow, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                .help("Light blooming around the lines, like a CRT's phosphors")
-            control("Dots", \.dither.dots, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                .help("Break the lines into glowing beads")
-            control("Wobble", \.dither.wobble, range: DitherSettings.wobbleRange, unit: "px", decimals: 0, logarithmic: false)
-                .help("Make the lines waver sideways down the screen, like a CRT losing sync")
+            control(L10n.tr("Line Spacing"), \.dither.lineSpacing, range: DitherSettings.lineSpacingRange, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
+                .help(L10n.tr("How far apart the screen's lines are"))
+            control(L10n.tr("Glow"), \.dither.glow, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                .help(L10n.tr("Light blooming around the lines, like a CRT's phosphors"))
+            control(L10n.tr("Dots"), \.dither.dots, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                .help(L10n.tr("Break the lines into glowing beads"))
+            control(L10n.tr("Wobble"), \.dither.wobble, range: DitherSettings.wobbleRange, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
+                .help(L10n.tr("Make the lines waver sideways down the screen, like a CRT losing sync"))
         }
         if dither.style.isHalftone {
-            control("Cell Size", \.dither.cellSize, range: DitherSettings.cellSizeRange, unit: "px", decimals: 0, logarithmic: false)
+            control(L10n.tr("Cell Size"), \.dither.cellSize, range: DitherSettings.cellSizeRange, unit: L10n.tr("px"), decimals: 0, logarithmic: false)
         }
         if dither.style.isHalftone {
-            control("Angle", \.dither.angle, range: -90...90, unit: "°", decimals: 0, logarithmic: false)
+            control(L10n.tr("Angle"), \.dither.angle, range: -90...90, unit: L10n.tr("°"), decimals: 0, logarithmic: false)
         }
         if dither.style == .ascii {
             HStack(spacing: 10) {
-                Text("Characters")
-                TextField("Characters", text: Binding(get: { dither.characters }, set: { new in update { $0.dither.characters = new } }))
+                Text(L10n.tr("Characters"))
+                TextField(L10n.tr("Characters"), text: Binding(get: { dither.characters }, set: { new in update { $0.dither.characters = new } }))
                     .textFieldStyle(.roundedBorder).font(.body.monospaced())
             }
-            .help("The characters to draw with, in any order: each spot gets the one whose ink best matches its tone")
+            .help(L10n.tr("The characters to draw with, in any order: each spot gets the one whose ink best matches its tone"))
         }
         if dither.style.hasTones {
-            control("Tones", \.dither.levels, range: DitherSettings.levelsRange, unit: "", decimals: 0, logarithmic: false)
-                .help("Tones per channel: 2 is pure black and white")
+            control(L10n.tr("Tones"), \.dither.levels, range: DitherSettings.levelsRange, unit: "", decimals: 0, logarithmic: false)
+                .help(L10n.tr("Tones per channel: 2 is pure black and white"))
         }
         if dither.style.diffuses {
-            control("Diffusion", \.dither.diffusion, range: 0...100, unit: "%", decimals: 0, logarithmic: false)
-                .help("How much of each pixel's error spreads to its neighbors. Less gives flatter areas")
+            control(L10n.tr("Diffusion"), \.dither.diffusion, range: 0...100, unit: L10n.tr("%"), decimals: 0, logarithmic: false)
+                .help(L10n.tr("How much of each pixel's error spreads to its neighbors. Less gives flatter areas"))
         }
-        control("Density", \.dither.density, range: -100...100, unit: "", decimals: 0, logarithmic: false)
-            .help("More ink (darker) or less before dithering")
-        control("Contrast", \.dither.contrast, range: -100...100, unit: "", decimals: 0, logarithmic: false)
+        control(L10n.tr("Density"), \.dither.density, range: -100...100, unit: "", decimals: 0, logarithmic: false)
+            .help(L10n.tr("More ink (darker) or less before dithering"))
+        control(L10n.tr("Contrast"), \.dither.contrast, range: -100...100, unit: "", decimals: 0, logarithmic: false)
         // A menu, like Style: the three choices as segments are wider than the panel, which then flips between
         // squeezing the row and wrapping it, resizing itself at every slider step.
-        Picker("Colors", selection: Binding(get: { dither.colors }, set: { new in update { $0.dither.colors = new } })) {
-            ForEach(DitherColors.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+        Picker(L10n.tr("Colors"), selection: Binding(get: { dither.colors }, set: { new in update { $0.dither.colors = new } })) {
+            ForEach(DitherColors.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
         }
         .fixedSize()
         if dither.colors == .twoColors {
             HStack(spacing: 8) {
-                Text("Dark")
-                swatch(dither.dark, help: "Choose the dark color") { session.openDitherColorPicker(light: false) }
-                Text("Light").padding(.leading, 10)
-                swatch(dither.light, help: "Choose the light color") { session.openDitherColorPicker(light: true) }
+                Text(L10n.tr("Dark"))
+                swatch(dither.dark, help: L10n.tr("Choose the dark color")) { session.openDitherColorPicker(light: false) }
+                Text(L10n.tr("Light Color")).padding(.leading, 10)
+                swatch(dither.light, help: L10n.tr("Choose the light color")) { session.openDitherColorPicker(light: true) }
                 Spacer()
             }
         }
         if dither.pixelSize > 1, dither.style.usesPixelSize {
-            Picker("Pixel Shape", selection: Binding(get: { dither.pixelShape }, set: { new in update { $0.dither.pixelShape = new } })) {
-                ForEach(DitherPixelShape.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            Picker(L10n.tr("Pixel Shape"), selection: Binding(get: { dither.pixelShape }, set: { new in update { $0.dither.pixelShape = new } })) {
+                ForEach(DitherPixelShape.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
             }
             .fixedSize()
-            .help("Draw each chunky pixel as a solid square, or as a round dot like a dot-matrix screen")
+            .help(L10n.tr("Draw each chunky pixel as a solid square, or as a round dot like a dot-matrix screen"))
         }
         if dither.style.drawsMarks {
-            Toggle("Light on Dark", isOn: flag(\.dither.lightOnDark))
-                .help("Draw the marks for the light tones on the dark color, like a glowing screen")
+            Toggle(L10n.tr("Light on Dark"), isOn: flag(\.dither.lightOnDark))
+                .help(L10n.tr("Draw the marks for the light tones on the dark color, like a glowing screen"))
         }
     }
 
@@ -307,7 +307,7 @@ struct FilterSheet: View {
                             range: range)
             if let track {
                 CameraRawSlider(value: settings[keyPath: key], range: range, track: track,
-                                help: "\(title). Double-click to reset.",
+                                help: L10n.tr("\(title). Double-click to reset."),
                                 onChange: { value in update { $0[keyPath: key] = (value * step).rounded() / step } },
                                 onReset: reset)
             } else {
@@ -339,11 +339,11 @@ struct GradientMapControls: View {
                 .overlay { RoundedRectangle(cornerRadius: 4, style: .continuous).strokeBorder(.black.opacity(0.35)) }
                 .accessibilityHidden(true)
             HStack(spacing: 20) {
-                swatch("Shadows", settings.shadows) { pick(false) }
-                swatch("Highlights", settings.highlights) { pick(true) }
+                swatch(L10n.tr("Shadows"), settings.shadows) { pick(false) }
+                swatch(L10n.tr("Highlights"), settings.highlights) { pick(true) }
                 Spacer()
             }
-            Toggle("Reverse", isOn: $settings.reversed)
+            Toggle(L10n.tr("Reverse"), isOn: $settings.reversed)
         }
     }
 
@@ -361,8 +361,8 @@ struct GradientMapControls: View {
                     .contentShape(shape)
             }
             .buttonStyle(.plain)
-            .help("Choose the \(title.lowercased()) color")
-            .accessibilityLabel("\(title) color")
+            .help(L10n.tr("Choose the \(title.lowercased()) color"))
+            .accessibilityLabel(L10n.tr("\(title) color"))
             Text(title)
         }
     }

@@ -6,11 +6,11 @@ nonisolated enum PSDError: LocalizedError, Equatable {
     case truncated, unsupportedVersion, unsupportedColorMode, unsupportedDepth, unsupportedCompression
     var errorDescription: String? {
         switch self {
-        case .truncated: "The Photoshop file could not be read. It may be damaged or incomplete."
-        case .unsupportedVersion: "This Photoshop file uses a format version Compositor can’t read."
-        case .unsupportedColorMode: "Only 8-bit RGB Photoshop files can be imported."
-        case .unsupportedDepth: "Only 8-bit RGB Photoshop files can be imported."
-        case .unsupportedCompression: "This Photoshop file uses a layer compression method that isn’t supported."
+        case .truncated: L10n.tr("The Photoshop file could not be read. It may be damaged or incomplete.")
+        case .unsupportedVersion: L10n.tr("This Photoshop file uses a format version Compositor can’t read.")
+        case .unsupportedColorMode: L10n.tr("Only 8-bit RGB Photoshop files can be imported.")
+        case .unsupportedDepth: L10n.tr("Only 8-bit RGB Photoshop files can be imported.")
+        case .unsupportedCompression: L10n.tr("This Photoshop file uses a layer compression method that isn’t supported.")
         }
     }
 }

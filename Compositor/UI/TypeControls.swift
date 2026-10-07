@@ -3,6 +3,14 @@ import AppKit
 
 struct TypeControls: View {
     @Bindable var session: EditorSession
+    @State private var leadingText = ""
+    @FocusState private var editingLeading: Bool
+
+    private func syncLeadingText() {
+        let leading = session.currentTextStyle.leading
+        leadingText = leading > 0 ? LocalizedNumber.format(Double(leading)) : ""
+    }
+
     private func value<T>(_ key: WritableKeyPath<LayerTextStyle, T>) -> Binding<T> {
         Binding(get: { session.currentTextStyle[keyPath: key] }, set: { value in
             session.changeTextStyle { $0[keyPath: key] = value }
@@ -15,7 +23,7 @@ struct TypeControls: View {
     }
     var body: some View {
         HStack(spacing: 12) {
-            Text("Type").font(ToolHeaderStyle.titleFont)
+            Text(L10n.tr("Type")).font(ToolHeaderStyle.titleFont)
             ScrollView(.horizontal) {
                 HStack(spacing: 10) {
                     TypeFontPicker(fontName: Binding(get: {
@@ -36,9 +44,9 @@ struct TypeControls: View {
                         case .keep: session.keepFontPreview()
                         }
                     })
-                        .frame(width: 210).help("Font face, including bold and italic variants")
-                    TextField("Size", value: number(\.fontSize), format: .number).frame(width: 52)
-                        .unitSuffix("px", scrubValue: value(\.fontSize), sensitivity: 1, range: 1...2000, step: 1)
+                        .frame(width: 210).help(L10n.tr("Font face, including bold and italic variants"))
+                    TextField(L10n.tr("Size"), value: number(\.fontSize), format: .number).frame(width: 52)
+                        .unitSuffix(L10n.tr("px"), scrubValue: value(\.fontSize), sensitivity: 1, range: 1...2000, step: 1)
                         .arrowSteps(value: { Double(session.currentTextStyle.fontSize) },
                                     change: { stepped in session.changeTextStyle { $0.fontSize = CGFloat(min(2000, max(1, stepped))) } })
                     Button { session.openTextColorPicker() } label: {
@@ -48,7 +56,7 @@ struct TypeControls: View {
                             .overlay { swatch.strokeBorder(.black.opacity(0.5), lineWidth: 1) }
                             .frame(width: 36, height: 18)
                     }
-                    .buttonStyle(.plain).help("Text color").accessibilityLabel("Text color")
+                    .buttonStyle(.plain).help(L10n.tr("Text color")).accessibilityLabel(L10n.tr("Text color"))
                     HStack(spacing: 2) {
                         ForEach(TextAlignment.allCases, id: \.self) { alignment in
                             let selected = session.currentTextStyle.alignment == alignment
@@ -63,35 +71,47 @@ struct TypeControls: View {
                                     .contentShape(RoundedRectangle(cornerRadius: 4))
                             }
                             .buttonStyle(.plain)
-                            .help("Align " + alignment.rawValue.lowercased())
-                            .accessibilityLabel("Align " + alignment.rawValue.lowercased())
+                            .help(L10n.tr("Align \(L10n.text(alignment.rawValue))"))
+                            .accessibilityLabel(L10n.tr("Align \(L10n.text(alignment.rawValue))"))
                             .accessibilityAddTraits(selected ? .isSelected : [])
                         }
                     }
-                    Text("Tracking").scrubbable(sensitivity: 1, value: value(\.tracking), range: -100...1000, step: 1)
-                    TextField("Tracking", value: number(\.tracking), format: .number).frame(width: 45)
+                    Text(L10n.tr("Tracking")).scrubbable(sensitivity: 1, value: value(\.tracking), range: -100...1000, step: 1)
+                    TextField(L10n.tr("Tracking"), value: number(\.tracking), format: .number).frame(width: 45)
                         .arrowSteps(value: { Double(session.currentTextStyle.tracking) },
                                     change: { stepped in session.changeTextStyle { $0.tracking = CGFloat(stepped) } })
-                    Text("Leading").scrubbable(sensitivity: 1, value: value(\.leading), range: 0...5000, step: 1)
+                    Text(L10n.tr("Leading")).scrubbable(sensitivity: 1, value: value(\.leading), range: 0...5000, step: 1)
                     // 0 means Auto: the field is left empty so its "Auto" placeholder shows through.
-                    TextField("Leading", text: Binding(get: {
-                        let leading = session.currentTextStyle.leading
-                        return leading > 0 ? String(Int(leading.rounded())) : ""
-                    }, set: { typed in
-                        let value = Double(typed.trimmingCharacters(in: .whitespaces)) ?? 0
-                        session.changeTextStyle { $0.leading = CGFloat(max(0, min(5000, value))) }
-                    }), prompt: Text("Auto"))
+                    TextField(L10n.tr("Leading"), text: $leadingText, prompt: Text(L10n.tr("Auto")))
+                        .focused($editingLeading)
+                        .onAppear { syncLeadingText() }
+                        .onChange(of: session.currentTextStyle.leading) { _, _ in
+                            if !editingLeading { syncLeadingText() }
+                        }
+                        .onChange(of: editingLeading) { _, focused in
+                            if !focused { syncLeadingText() }
+                        }
+                        .onChange(of: leadingText) { _, typed in
+                            guard editingLeading else { return }
+                            let value = typed.trimmingCharacters(in: .whitespaces).isEmpty ? 0 : LocalizedNumber.parse(typed)
+                            if let value {
+                                session.changeTextStyle { $0.leading = CGFloat(max(0, min(5000, value))) }
+                            }
+                        }
                         .frame(width: 52)
                         .arrowSteps(value: { Double(session.currentTextStyle.lineHeight) },
-                                    change: { stepped in session.changeTextStyle { $0.leading = CGFloat(max(0, stepped)) } })
-                        .help("Line height, baseline to baseline. Empty or 0 is Auto: 120% of the font size.")
+                                    change: { stepped in
+                                        session.changeTextStyle { $0.leading = CGFloat(max(0, stepped)) }
+                                        leadingText = LocalizedNumber.format(max(0, stepped))
+                                    })
+                        .help(L10n.tr("Line height, baseline to baseline. Empty or 0 is Auto: 120% of the font size."))
                 }
             }.scrollIndicators(.hidden)
             if session.textDraft != nil {
-                Button("Cancel") { session.cancelText() }
-                Button("Done") { _ = session.finishText() }
+                Button(L10n.tr("Cancel")) { session.cancelText() }
+                Button(L10n.tr("Done")) { _ = session.finishText() }
             } else {
-                Button("Edit Text") { session.editActiveText() }.disabled(session.activeLayer?.liveText == nil)
+                Button(L10n.tr("Edit Text")) { session.editActiveText() }.disabled(session.activeLayer?.liveText == nil)
             }
         }
         .textFieldStyle(.roundedBorder).padding(.horizontal, 18).toolHeaderBar()
@@ -119,7 +139,7 @@ private struct TypeFontPicker: NSViewRepresentable {
         button.cell?.lineBreakMode = .byTruncatingTail
         button.cell?.usesSingleLineMode = true
         button.cell?.alignment = .left
-        button.setAccessibilityLabel("Font")
+        button.setAccessibilityLabel(L10n.tr("Font"))
         button.target = context.coordinator
         button.action = #selector(Coordinator.choose(_:))
         button.menu?.delegate = context.coordinator
@@ -141,7 +161,7 @@ private struct TypeFontPicker: NSViewRepresentable {
     }
 
     /// Selected letters in more than one face: the menu says so with an item of its own at the top, which isn't a font.
-    private static let multiple = "(Multiple)"
+    private static let multiple = L10n.tr("(Multiple)")
     private static func isMultiple(_ item: NSMenuItem?) -> Bool { item?.representedObject as? String == multiple }
     static func showMultiple(in button: NSPopUpButton) {
         if !isMultiple(button.item(at: 0)) {

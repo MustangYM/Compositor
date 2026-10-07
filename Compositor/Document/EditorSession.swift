@@ -96,7 +96,7 @@ enum NavigationTool: String, CaseIterable {
     /// Tools that draw and edit selections, sharing modifiers, moving, and nudging.
     var isSelectionTool: Bool { self == .marquee || self == .lasso || self == .wand }
     var symbol: String { self == .type ? "textformat" : self == .eyedropper ? "eyedropper" : self == .marquee ? "rectangle.dashed" : self == .lasso ? "lasso" : self == .wand ? "wand.and.stars" : self == .brush ? "paintbrush.pointed" : self == .spotHealing ? "bandage" : self == .cloneStamp ? "seal" : self == .blur ? "drop" : self == .gradient ? "square.bottomhalf.filled" : self == .shape ? "square.on.circle" : self == .crop ? "crop" : self == .move ? "arrow.up.left.and.arrow.down.right" : self == .hand ? "hand.draw" : "magnifyingglass" }
-    var label: String { self == .type ? "Type (T)" : self == .eyedropper ? "Eyedropper (I)" : self == .marquee ? "Marquee (M)" : self == .lasso ? "Lasso (L)" : self == .wand ? "Magic (W) · Tab switches Wand and Object" : self == .brush ? "Brush (B) · Eraser (E)" : self == .spotHealing ? "Spot Healing Brush (J)" : self == .cloneStamp ? "Clone Stamp (S) · Option-click sets the source" : self == .blur ? "Smear (R)" : self == .gradient ? "Gradient (G)" : self == .shape ? "Shape (U) · Shift-U switches Rectangle/Ellipse" : self == .crop ? "Crop (C)" : self == .move ? "Move / Transform (V)" : self == .hand ? "Hand (H)" : "Zoom (Z)" }
+    var label: String { self == .type ? L10n.tr("Type (T)") : self == .eyedropper ? L10n.tr("Eyedropper (I)") : self == .marquee ? L10n.tr("Marquee (M)") : self == .lasso ? L10n.tr("Lasso (L)") : self == .wand ? L10n.tr("Magic (W) · Tab switches Wand and Object") : self == .brush ? L10n.tr("Brush (B) · Eraser (E)") : self == .spotHealing ? L10n.tr("Spot Healing Brush (J)") : self == .cloneStamp ? L10n.tr("Clone Stamp (S) · Option-click sets the source") : self == .blur ? L10n.tr("Smear (R)") : self == .gradient ? L10n.tr("Gradient (G)") : self == .shape ? L10n.tr("Shape (U) · Shift-U switches Rectangle/Ellipse") : self == .crop ? L10n.tr("Crop (C)") : self == .move ? L10n.tr("Move / Transform (V)") : self == .hand ? L10n.tr("Hand (H)") : L10n.tr("Zoom (Z)") }
 }
 
 @Observable
@@ -439,7 +439,7 @@ final class EditorSession {
         let carried = selection.reduce(into: Set<UUID>()) { $0.formUnion(descendantIDs(of: $1)) }
         let targets = (document?.layers ?? []).filter { selection.contains($0.id) && !carried.contains($0.id) }.map(\.id)
         guard !targets.isEmpty else { return }
-        beginEdit(targets.count > 1 ? "Duplicate Layers" : "Duplicate Layer")
+        beginEdit(targets.count > 1 ? L10n.tr("Duplicate Layers") : L10n.tr("Duplicate Layer"))
         // Stacked as Duplicate Layer stacks them: several together above the topmost original.
         duplicateLayers(targets)
         let copies = selectedLayerIDs.subtracting(selection)
@@ -467,7 +467,7 @@ final class EditorSession {
         if let corners = edit.corners { commitDistort(edit, corners: corners); return }
         if let group = edit.group {
             guard edit.draft.isValid else { return }
-            beginEdit("Transform Layers")
+            beginEdit(L10n.tr("Transform Layers"))
             for (id, original) in group.originals {
                 guard let index = document?.layers.firstIndex(where: { $0.id == id }) else { continue }
                 let moved = original.following(from: group.box, to: edit.draft)
@@ -482,7 +482,7 @@ final class EditorSession {
             return
         }
         guard edit.draft.isValid, let index = document?.layers.firstIndex(where: { $0.id == edit.layerID }) else { return }
-        beginEdit("Transform Layer")
+        beginEdit(L10n.tr("Transform Layer"))
         if let mask = document?.layers[index].mask, let old = document?.layers[index].transform {
             document?.layers[index].mask?.placement = mask.placement(movingLayer: old, to: edit.draft)
         }
@@ -648,8 +648,8 @@ final class EditorSession {
         guard canEditLayers, let document else { return }
         let names = Set(document.layers.map(\.name))
         var number = 1
-        while names.contains("Layer \(number)") { number += 1 }
-        var layer = ImageLayer(name: "Layer \(number)", blankSize: document.size)
+        while names.contains(L10n.tr("Layer \(number)")) { number += 1 }
+        var layer = ImageLayer(name: L10n.tr("Layer \(number)"), blankSize: document.size)
         layer.parentID = activeLayer?.isGroup == true ? activeLayerID : activeLayer?.parentID
         if let parent = layer.parentID { collapsedGroupIDs.remove(parent) }
         var insertion = document.layers.firstIndex { $0.id == activeLayerID }.map { $0 + 1 } ?? document.layers.count
@@ -668,7 +668,7 @@ final class EditorSession {
             }
             if let topmost = document.layers.lastIndex(where: { isInside($0.id) }) { insertion = max(insertion, topmost + 1) }
         }
-        beginEdit("New Blank Layer")
+        beginEdit(L10n.tr("New Blank Layer"))
         defer { endEdit() }
         self.document?.layers.insert(layer, at: insertion)
         activeLayerID = layer.id
@@ -698,14 +698,14 @@ final class EditorSession {
     func renameLayer(_ id: UUID, to name: String) {
         let name = name.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !isProjectBusy, !isImporting, !name.isEmpty, let index = document?.layers.firstIndex(where: { $0.id == id }) else { return }
-        beginEdit("Rename Layer")
+        beginEdit(L10n.tr("Rename Layer"))
         defer { endEdit() }
         document?.layers[index].name = name
     }
 
     func toggleLayerVisibility(_ id: UUID) {
         guard canEditLayers, let index = document?.layers.firstIndex(where: { $0.id == id }) else { return }
-        beginEdit(document?.layers[index].isVisible == true ? "Hide Layer" : "Show Layer")
+        beginEdit(document?.layers[index].isVisible == true ? L10n.tr("Hide Layer") : L10n.tr("Show Layer"))
         defer { endEdit() }
         document?.layers[index].isVisible.toggle()
     }
@@ -715,7 +715,7 @@ final class EditorSession {
     func beginVisibilitySwipe(_ id: UUID) -> Bool? {
         guard canEditLayers, let layer = document?.layers.first(where: { $0.id == id }) else { return nil }
         let visible = !layer.isVisible
-        beginEdit(visible ? "Show Layer" : "Hide Layer")
+        beginEdit(visible ? L10n.tr("Show Layer") : L10n.tr("Hide Layer"))
         setVisibilityInSwipe(id, visible: visible)
         return visible
     }
@@ -731,7 +731,7 @@ final class EditorSession {
               offsets.allSatisfy({ layers.indices.contains($0) }), (0...layers.count).contains(destination) else { return }
         // List order is top-to-bottom; the compositor stores bottom-to-top.
         layers.move(fromOffsets: offsets, toOffset: destination)
-        beginEdit("Reorder Layers")
+        beginEdit(L10n.tr("Reorder Layers"))
         defer { endEdit() }
         document?.layers = layers.reversed()
     }
@@ -748,7 +748,7 @@ final class EditorSession {
         guard let index = siblings.firstIndex(where: { $0.id == activeLayer.id }),
               let a = layers.firstIndex(where: { $0.id == activeLayer.id }),
               let b = layers.firstIndex(where: { $0.id == siblings[index + offset].id }) else { return }
-        beginEdit("Reorder Layers")
+        beginEdit(L10n.tr("Reorder Layers"))
         document?.layers.swapAt(a, b)
         endEdit()
     }
@@ -781,7 +781,7 @@ final class EditorSession {
         while !pendingImports.isEmpty {
           let request = pendingImports.removeFirst()
           let psdOnly = request.files.allSatisfy { PSDReader.matches($0.0) }
-          beginEdit(psdOnly ? "Import Photoshop File" : "Import Images")
+          beginEdit(psdOnly ? L10n.tr("Import Photoshop File") : L10n.tr("Import Images"))
           // No document: the first successful image determines the canvas, regardless of drop point.
           let point = document == nil ? nil : request.point
           for (url, scoped) in request.files {
@@ -808,7 +808,7 @@ final class EditorSession {
                                                                          remainingPixels: DocumentLimits.documentPixelBudget - usedPixels)
                     insert(asset, centeredAt: point)
                 } else if PSDReader.matches(url) {
-                    beginPSDReading(title: "Open “\(url.lastPathComponent)”?", confirmTitle: "Import")
+                    beginPSDReading(title: L10n.tr("Open “\(url.lastPathComponent)”?"), confirmTitle: L10n.tr("Import"))
                     let imported: PSDImport
                     do {
                         let parsed = try await ImageImporter.shared.loadPhotoshop(url, remainingPixels: DocumentLimits.documentPixelBudget - usedPixels)
@@ -845,7 +845,7 @@ final class EditorSession {
     }
 
     func insert(_ asset: ImportedImage, centeredAt point: CGPoint? = nil) {
-        beginEdit("Import Image")
+        beginEdit(L10n.tr("Import Image"))
         defer { endEdit() }
         if document == nil {
             document = CanvasDocument(width: asset.image.width, height: asset.image.height)
@@ -908,7 +908,7 @@ final class EditorSession {
     }
 
     func insertPhotoshop(_ imported: PSDImport, named: String, centeredAt point: CGPoint? = nil) throws {
-        beginEdit("Import Photoshop File")
+        beginEdit(L10n.tr("Import Photoshop File"))
         defer { endEdit() }
         var incoming = imported.layers
         let wrapping = document != nil
@@ -948,10 +948,10 @@ final class EditorSession {
     func createDocument(width: Int, height: Int, emptyLayer: Bool = false) {
         guard !isProjectBusy, !isImporting, (1...DocumentLimits.maxSide).contains(width), (1...DocumentLimits.maxSide).contains(height) else { return }
         commitTransform()
-        beginEdit("New Canvas")
+        beginEdit(L10n.tr("New Canvas"))
         defer { endEdit() }
         var document = CanvasDocument(width: width, height: height)
-        let layer = emptyLayer ? ImageLayer(name: "Layer 1", blankSize: document.size) : nil
+        let layer = emptyLayer ? ImageLayer(name: L10n.tr("Layer 1"), blankSize: document.size) : nil
         if let layer { document.layers = [layer] }
         self.document = document
         activeLayerID = layer?.id

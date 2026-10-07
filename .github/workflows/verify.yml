@@ -25,6 +25,9 @@ jobs:
       - name: Select Xcode 26.6
         run: sudo xcode-select -s /Applications/Xcode_26.6.app
 
+      - name: Check localization coverage
+        run: python3 scripts/check-localizations.py --require-reviewed
+
       - name: Resolve Swift packages
         run: >
           xcodebuild -resolvePackageDependencies
