@@ -149,7 +149,7 @@ nonisolated struct CameraRawCurveSettings: Equatable, Sendable {
 
 /// Eight color families, each with hue, saturation, and luminance shifts of −100…100.
 nonisolated struct CameraRawMixerSettings: Equatable, Sendable {
-    static let names = ["Reds", "Oranges", "Yellows", "Greens", "Aquas", "Blues", "Purples", "Magentas"]
+    static let names = [L10n.tr("Reds"), L10n.tr("Oranges"), L10n.tr("Yellows"), L10n.tr("Greens"), L10n.tr("Aquas"), L10n.tr("Blues"), L10n.tr("Purples"), L10n.tr("Magentas")]
     static let centers = [0.0, 30.0, 60.0, 120.0, 180.0, 240.0, 270.0, 300.0]
     var hue = Array(repeating: 0.0, count: 8)
     var saturation = Array(repeating: 0.0, count: 8)

@@ -16,13 +16,13 @@ struct LevelsSheet: View {
     }
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Picker("Channel", selection: Binding(get: { settings.channel }, set: { channel in update { $0.channel = channel } })) {
-                ForEach(LevelsChannel.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            Picker(L10n.tr("Channel"), selection: Binding(get: { settings.channel }, set: { channel in update { $0.channel = channel } })) {
+                ForEach(LevelsChannel.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
             }.frame(width: 180)
             VStack(spacing: 0) {
                 histogram.frame(height: 150).background(.black.opacity(0.25))
                     .overlay(alignment: .topLeading) {
-                        if edit?.histogramReady != true { Text("Loading histogram…").font(.caption).padding(8) }
+                        if edit?.histogramReady != true { Text(L10n.tr("Loading histogram…")).font(.caption).padding(8) }
                     }
                 handles(output: false).frame(height: 20)
             }
@@ -43,43 +43,43 @@ struct LevelsSheet: View {
                 field("Output white", value(\.outputWhite), decimals: 0)
             }
             HStack {
-                Text("Sample").font(.caption).foregroundStyle(.secondary)
+                Text(L10n.tr("Sample")).font(.caption).foregroundStyle(.secondary)
                 ForEach(LevelsSample.allCases, id: \.self) { mode in
                     Button {
                         edit?.sampleMode = edit?.sampleMode == mode ? nil : mode
                         session.brushRevision += 1
                     } label: {
-                        Label(mode.rawValue, systemImage: "eyedropper")
+                        Label(L10n.text(mode.rawValue), systemImage: "eyedropper")
                     }.tint(edit?.sampleMode == mode ? .accentColor : .secondary)
                 }
             }
             if let mode = edit?.sampleMode {
-                Text("Click the original layer to set \(mode.rawValue.lowercased()). Click the eyedropper again to stop.")
+                Text(L10n.tr("Click the original layer to set \(L10n.text(mode.rawValue)). Click the eyedropper again to stop."))
                     .font(.caption).foregroundStyle(.secondary)
             }
             VStack(alignment: .leading, spacing: 6) {
-                Text("Auto").font(.caption).foregroundStyle(.secondary)
+                Text(L10n.tr("Auto")).font(.caption).foregroundStyle(.secondary)
                 HStack {
                     ForEach(LevelsAuto.allCases, id: \.self) { mode in
-                        Button(mode.rawValue) { session.autoLevels(mode) }
+                        Button(L10n.text(mode.rawValue)) { session.autoLevels(mode) }
                     }
                 }.disabled(edit?.histogramReady != true)
             }
             HStack {
-                Toggle("Preview", isOn: Binding(get: { edit?.preview ?? true }, set: {
+                Toggle(L10n.tr("Preview"), isOn: Binding(get: { edit?.preview ?? true }, set: {
                     session.updateLevels(settings, preview: $0)
                 })).configuredNativeShortcut("p", modifiers: .option)
                 Spacer()
-                Button("Reset") { edit?.sampleMode = nil; update { $0 = LevelsSettings() } }
+                Button(L10n.tr("Reset")) { edit?.sampleMode = nil; update { $0 = LevelsSettings() } }
             }
-            Text(session.adjustmentOriginal != nil ? "Underlying pixels · alpha-weighted histogram" : session.selection == nil ? "Original pixels · alpha-weighted histogram" : "Original pixels · selection and alpha-weighted histogram")
+            Text(session.adjustmentOriginal != nil ? L10n.tr("Underlying pixels · alpha-weighted histogram") : session.selection == nil ? L10n.tr("Original pixels · alpha-weighted histogram") : L10n.tr("Original pixels · selection and alpha-weighted histogram"))
                 .font(.caption).foregroundStyle(.secondary)
             Divider()
             HStack {
-                Button("Cancel") { session.cancelLevels() }.configuredNativeShortcut(.escape)
+                Button(L10n.tr("Cancel")) { session.cancelLevels() }.configuredNativeShortcut(.escape)
                 Spacer()
                 if edit?.committing == true { ProgressView().controlSize(.small) }
-                Button("OK") { Task { await session.commitLevels() } }
+                Button(L10n.tr("OK")) { Task { await session.commitLevels() } }
                     .configuredNativeShortcut(.return).buttonStyle(.borderedProminent)
             }
         }
@@ -89,9 +89,9 @@ struct LevelsSheet: View {
     private func field(_ name: String, _ binding: Binding<Double>, decimals: Int) -> some View {
         let range: ClosedRange<Double> = name == "Gamma" ? 0.1...9.99 : 0...255
         return VStack(alignment: .leading, spacing: 5) {
-            Text(name).font(.caption).foregroundStyle(.secondary)
+            Text(L10n.text(name)).font(.caption).foregroundStyle(.secondary)
                 .scrubbable(sensitivity: decimals == 0 ? 1 : 0.01, value: binding, range: range)
-            TextField(name, value: binding, format: .number.precision(.fractionLength(decimals)))
+            TextField(L10n.text(name), value: binding, format: .number.precision(.fractionLength(decimals)))
                 .textFieldStyle(.roundedBorder).multilineTextAlignment(.trailing).frame(width: 80)
                 .accessibilityIdentifier("levels\(name.replacingOccurrences(of: " ", with: ""))")
         }
@@ -109,15 +109,15 @@ struct LevelsSheet: View {
             }
             let color: Color = switch settings.channel { case .rgb: .gray; case .red: .red; case .green: .green; case .blue: .blue }
             context.fill(path, with: .color(color))
-        }.accessibilityLabel("Original \(settings.channel.rawValue) histogram")
-        .help("Linear histogram with automatic vertical scaling. Tall spikes may extend beyond the graph; all tones from 0 to 255 remain included.")
+        }.accessibilityLabel(L10n.tr("Original \(L10n.text(settings.channel.rawValue)) histogram"))
+        .help(L10n.tr("Linear histogram with automatic vertical scaling. Tall spikes may extend beyond the graph; all tones from 0 to 255 remain included."))
     }
     private func handles(output: Bool) -> some View {
         GeometryReader { geometry in
             let gammaPosition = current.black + (current.white - current.black) * pow(0.5, current.gamma)
             let positions = output ? [current.outputBlack, current.outputWhite] : [current.black, gammaPosition, current.white]
             ForEach(positions.indices, id: \.self) { index in
-                let names = output ? ["Output black", "Output white"] : ["Input black", "Gamma", "Input white"]
+                let names = output ? [L10n.tr("Output black"), L10n.tr("Output white")] : [L10n.tr("Input black"), L10n.tr("Gamma"), L10n.tr("Input white")]
                 Image(systemName: "triangle.fill").font(.system(size: 12))
                     .foregroundStyle(index == 0 ? Color.black : index == positions.count - 1 ? .white : .gray)
                     .shadow(color: .gray, radius: 0.5)

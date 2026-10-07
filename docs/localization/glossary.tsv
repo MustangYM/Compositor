@@ -1,0 +1,427 @@
+English	zh-Hans	zh-Hant	ja	ko	de	fr	es	pt-BR
+%1$@ by 10	%1$@（步长 10）	%1$@（增減幅度 10）	%1$@（10 単位）	%1$@ (10 단위)	%1$@ um 10	%1$@ de 10	%1$@ en 10	%1$@ em 10
+%1$@ color	%1$@颜色	%1$@顏色	%1$@の色	%1$@ 색상	Farbe: %1$@	Couleur : %1$@	Color: %1$@	Cor: %1$@
+%1$@ copy	%1$@ 拷贝	%1$@ 拷貝	%1$@ のコピー	%1$@ 복사본	%1$@ Kopie	%1$@ copie	%1$@ copia	%1$@ cópia
+%1$@ effect	%1$@效果	%1$@效果	%1$@効果	%1$@ 효과	Effekt %1$@	Effet %1$@	Efecto %1$@	Efeito %1$@
+%1$@ is assigned to both %2$@ and %3$@.	%2$@ 和 %3$@ 均使用了快捷键 %1$@。	%2$@ 與 %3$@ 均使用了快速鍵 %1$@。	%1$@ は %2$@ と %3$@ の両方に割り当てられています。	%1$@이(가) %2$@ 및 %3$@ 모두에 할당되었습니다.	%1$@ ist sowohl %2$@ als auch %3$@ zugewiesen.	%1$@ est attribué à la fois à %2$@ et à %3$@.	%1$@ está asignado tanto a %2$@ como a %3$@.	%1$@ está atribuído a %2$@ e a %3$@.
+%1$@ is reserved by macOS.	%1$@ 是 macOS 的保留快捷键。	%1$@ 是 macOS 保留的快速鍵。	%1$@ は macOS 用に予約されています。	%1$@은(는) macOS에서 예약된 단축키입니다.	%1$@ ist für macOS reserviert.	%1$@ est réservé par macOS.	%1$@ está reservado por macOS.	%1$@ é reservado pelo macOS.
+%1$@ of %2$@.	%2$@的%1$@。	%2$@的%1$@。	%2$@の%1$@。	%2$@의 %1$@.	%1$@ von %2$@.	%1$@ de %2$@.	%1$@ de %2$@.	%1$@ de %2$@.
+%1$@ uncompressed RGBA canvas	未压缩 RGBA 画布：%1$@	未壓縮 RGBA 版面：%1$@	非圧縮 RGBA カンバス：%1$@	압축되지 않은 RGBA 캔버스: %1$@	Unkomprimierte RGBA-Arbeitsfläche: %1$@	Zone de travail RGBA non compressée : %1$@	Lienzo RGBA sin comprimir: %1$@	Tela RGBA sem compressão: %1$@
+%1$@. Double-click to reset.	%1$@。双击可重置。	%1$@。按兩下可重設。	%1$@。ダブルクリックでリセット。	%1$@. 두 번 클릭하여 재설정합니다.	%1$@. Zum Zurücksetzen doppelklicken.	%1$@. Double-cliquez pour réinitialiser.	%1$@. Haga doble clic para restablecer.	%1$@. Clique duas vezes para redefinir.
+3 by 3 Average	3 × 3 平均	3 × 3 平均	3 × 3 ピクセルの平均	3 × 3 평균	3 × 3 Pixel Durchschnitt	Moyenne 3 × 3	Promedio de 3 × 3	Média de 3 × 3
+5 by 5 Average	5 × 5 平均	5 × 5 平均	5 × 5 ピクセルの平均	5 × 5 평균	5 × 5 Pixel Durchschnitt	Moyenne 5 × 5	Promedio de 5 × 5	Média de 5 × 5
+Actual Pixels	实际像素	實際像素	等倍表示	실제 픽셀	Tatsächliche Pixel	Pixels réels	Píxeles reales	Pixels reais
+Add	添加	新增	追加	추가	Hinzufügen	Ajouter	Añadir	Adicionar
+Add %1$@	添加%1$@	新增%1$@	%1$@を追加	%1$@ 추가	%1$@ hinzufügen	Ajouter %1$@	Añadir %1$@	Adicionar %1$@
+Add Hide-All Mask	添加隐藏全部的蒙版	新增隱藏全部遮色片	すべてを隠すマスクを追加	모두 숨기기 마스크 추가	Alles ausblendende Maske hinzufügen	Ajouter un masque Tout masquer	Añadir máscara Ocultar todo	Adicionar máscara Ocultar tudo
+Add Mask	添加蒙版	新增遮色片	マスクを追加	마스크 추가	Maske hinzufügen	Ajouter un masque	Añadir máscara	Adicionar máscara
+Add Noise	添加杂色	增加雜訊	ノイズを加える	노이즈 추가	Rauschen hinzufügen	Ajout de bruit	Añadir ruido	Adicionar ruído
+Add Reveal-All Mask	添加显示全部的蒙版	新增顯示全部遮色片	すべてを表示するマスクを追加	모두 표시 마스크 추가	Alles einblendende Maske hinzufügen	Ajouter un masque Tout faire apparaître	Añadir máscara Descubrir todo	Adicionar máscara Revelar tudo
+Add to %1$@	添加到 %1$@	新增至 %1$@	%1$@に追加	%1$@에 추가	Zu %1$@ hinzufügen	Ajouter à %1$@	Añadir a %1$@	Adicionar a %1$@
+Advanced	高级	進階	詳細	고급	Erweitert	Avancé	Avanzado	Avançado
+Align %1$@	对齐：%1$@	對齊：%1$@	整列：%1$@	정렬: %1$@	Ausrichten: %1$@	Aligner : %1$@	Alinear: %1$@	Alinhar: %1$@
+Aligned	对齐	對齊	調整あり	정렬	Ausgerichtet	Aligné	Alineado	Alinhado
+All	全部	全部	すべて	모두	Alles	Tout	Todo	Tudo
+All Layers	所有图层	所有圖層	すべてのレイヤー	모든 레이어	Alle Ebenen	Tous les calques	Todas las capas	Todas as camadas
+Amount	数量	總量	量	양	Stärke	Gain	Cantidad	Intensidade
+Angle	角度	角度	角度	각도	Winkel	Angle	Ángulo	Ângulo
+Anti-alias	消除锯齿	消除鋸齒	アンチエイリアス	앤티 앨리어스	Glätten	Lissage	Suavizado	Suavização de serrilhado
+Apply	应用	套用	適用	적용	Anwenden	Appliquer	Aplicar	Aplicar
+Applying…	正在应用…	正在套用…	適用中…	적용 중…	Wird angewendet…	Application…	Aplicando…	Aplicando…
+Aquas	浅绿色	水綠色	アクア	아쿠아 계열	Aquamarintöne	Turquoises	Aguamarinas	Azuis-piscina
+Auto	自动	自動	自動	자동	Auto	Auto	Automático	Automático
+Background	背景色	背景色	背景色	배경색	Hintergrund	Arrière-plan	Fondo	Plano de fundo
+Background color	背景色	背景色	背景色	배경색	Hintergrundfarbe	Couleur d’arrière-plan	Color de fondo	Cor do plano de fundo
+Basic	基本	基本	基本	기본	Grundeinstellungen	Réglages de base	Básico	Básico
+Black	黑色	黑色	ブラック	검정	Schwarz	Noir	Negro	Preto
+Black & White	黑白	黑白	白黒	흑백	Schwarzweiß	Noir et blanc	Blanco y negro	Preto e branco
+Blacks	黑色色阶	黑色	黒レベル	검정 계열	Schwarz	Noirs	Negros	Pretos
+Blend mode “%1$@” isn’t supported and will be applied as Normal.	不支持混合模式“%1$@”，将使用“正常”模式。	不支援混合模式「%1$@」，將使用「正常」模式。	描画モード「%1$@」は未対応のため、「通常」を使用します。	“%1$@” 혼합 모드는 지원되지 않아 표준 모드로 적용됩니다.	Die Füllmethode „%1$@“ wird nicht unterstützt. Es wird „Normal“ verwendet.	Le mode de fusion « %1$@ » n’est pas pris en charge. Le mode Normal sera utilisé.	El modo de fusión «%1$@» no es compatible. Se utilizará Normal.	O modo de mesclagem “%1$@” não é compatível. Será usado Normal.
+Blue	蓝色	藍色	ブルー	파랑	Blau	Bleu	Azul	Azul
+Blue Primary	蓝原色	藍色原色	ブルー原色	파랑 원색	Primärwert Blau	Bleu primaire	Azul primario	Azul primário
+Blues	蓝色	藍色	ブルー系	파랑 계열	Blautöne	Bleus	Azules	Azuis
+Blur	模糊	模糊	ぼかし	흐림 효과	Weichzeichnen	Flou	Desenfocar	Desfoque
+Bottom	下	下	下	아래쪽	Unten	Bas	Inferior	Inferior
+Brush	画笔	筆刷	ブラシ	브러시	Pinsel	Pinceau	Pincel	Pincel
+Brush tool	画笔工具	筆刷工具	ブラシツール	브러시 도구	Pinsel-Werkzeug	Outil Pinceau	Herramienta Pincel	Ferramenta Pincel
+Calibration	校准	校正	キャリブレーション	보정	Kalibrierung	Étalonnage	Calibración	Calibração
+Camera Raw Filter	Camera Raw 滤镜	Camera Raw 濾鏡	Camera Raw フィルター	Camera Raw 필터	Camera Raw-Filter	Filtre Camera Raw	Filtro de Camera Raw	Filtro Camera Raw
+Cancel	取消	取消	キャンセル	취소	Abbrechen	Annuler	Cancelar	Cancelar
+Cancel %1$@	取消%1$@	取消%1$@	%1$@をキャンセル	%1$@ 취소	%1$@ abbrechen	Annuler %1$@	Cancelar %1$@	Cancelar %1$@
+Canvas	画布	版面	カンバス	캔버스	Arbeitsfläche	Zone de travail	Lienzo	Tela
+Canvas & Layers	画布与图层	版面與圖層	カンバスとレイヤー	캔버스 및 레이어	Arbeitsfläche und Ebenen	Zone de travail et calques	Lienzo y capas	Tela e camadas
+Canvas Size	画布大小	版面尺寸	カンバスサイズ	캔버스 크기	Arbeitsfläche	Taille de la zone de travail	Tamaño de lienzo	Tamanho da tela
+Center	居中	置中	中央	중앙	Mitte	Centre	Centro	Centro
+Centimeters	厘米	公分	センチメートル	센티미터	Zentimeter	Centimètres	Centímetros	Centímetros
+Check for Updates…	检查更新…	檢查更新…	アップデートを確認…	업데이트 확인…	Nach Updates suchen…	Rechercher des mises à jour…	Buscar actualizaciones…	Verificar atualizações…
+Clarity	清晰度	清晰度	明瞭度	명료도	Klarheit	Clarté	Claridad	Claridade
+Clear Guides	清除参考线	清除參考線	ガイドを消去	안내선 지우기	Hilfslinien löschen	Effacer les repères	Borrar guías	Apagar guias
+Clear Menu	清除菜单	清除選單	メニューを消去	메뉴 지우기	Menü löschen	Effacer le menu	Borrar menú	Limpar menu
+Clear Selection Pixels	清除选区内像素	清除選取範圍內的像素	選択範囲のピクセルを消去	선택 영역 픽셀 지우기	Auswahlpixel löschen	Effacer les pixels sélectionnés	Borrar píxeles seleccionados	Limpar pixels selecionados
+Click to select; double-click to edit; Option-drag to copy %1$@	单击选择；双击编辑；按住 Option 拖动以复制%1$@	按一下選取；按兩下編輯；按住 Option 拖曳以拷貝%1$@	クリックで選択、ダブルクリックで編集、Option を押しながらドラッグして %1$@ をコピー	클릭하여 선택, 두 번 클릭하여 편집, Option을 누른 채 드래그하여 %1$@ 복사	Klicken zum Auswählen; Doppelklicken zum Bearbeiten; mit Option ziehen, um %1$@ zu kopieren	Cliquez pour sélectionner ; double-cliquez pour modifier ; faites glisser avec Option pour copier %1$@	Haga clic para seleccionar; doble clic para editar; arrastre con Opción para copiar %1$@	Clique para selecionar; clique duas vezes para editar; arraste com Option para copiar %1$@
+Clone Stamp	仿制图章	仿製印章	コピースタンプ	복제 도장	Kopierstempel	Tampon de duplication	Tampón de clonar	Carimbo
+Close %1$@	关闭 %1$@	關閉 %1$@	%1$@を閉じる	%1$@ 닫기	%1$@ schließen	Fermer %1$@	Cerrar %1$@	Fechar %1$@
+Close Project	关闭项目	關閉專案	プロジェクトを閉じる	프로젝트 닫기	Projekt schließen	Fermer le projet	Cerrar proyecto	Fechar projeto
+Color	颜色	顏色	カラー	색상	Farbe	Couleur	Color	Cor
+Color Balance	色彩平衡	色彩平衡	カラーバランス	색상 균형	Farbbalance	Balance des couleurs	Equilibrio de color	Equilíbrio de cores
+Color Burn	颜色加深	加深顏色	焼き込みカラー	색상 번	Farbig nachbelichten	Densité couleur +	Subexponer color	Superexposição de cores
+Color Dodge	颜色减淡	加亮顏色	覆い焼きカラー	색상 닷지	Farbig abwedeln	Densité couleur −	Sobreexponer color	Subexposição de cores
+Color Grading	颜色分级	顏色分級	カラーグレーディング	색상 그레이딩	Color-Grading	Color Grading	Gradación de color	Correção de cores
+Color Mixer	混色器	混色器	カラーミキサー	색상 혼합기	Farbmischer	Mélangeur de couleurs	Mezclador de colores	Misturador de cores
+Color Overlay	颜色叠加	顏色覆蓋	カラーオーバーレイ	색상 오버레이	Farbüberlagerung	Incrustation couleur	Superposición de colores	Sobreposição de cor
+Color Picker (%1$@ Color)	拾色器（%1$@颜色）	檢色器（%1$@顏色）	カラーピッカー（%1$@の色）	색상 피커(%1$@ 색상)	Farbwähler (Farbe für %1$@)	Sélecteur de couleurs (couleur de %1$@)	Selector de color (color de %1$@)	Seletor de cores (cor de %1$@)
+Color Picker (%1$@)	拾色器（%1$@）	檢色器（%1$@）	カラーピッカー（%1$@）	색상 피커(%1$@)	Farbwähler (%1$@)	Sélecteur de couleurs (%1$@)	Selector de color (%1$@)	Seletor de cores (%1$@)
+Color Range	色彩范围	顏色範圍	色域指定	색상 범위	Farbbereich	Plage de couleurs	Gama de colores	Intervalo de cores
+Colorize	着色	著色	色彩の統一	색상화	Färben	Redéfinir	Colorear	Colorir
+Content-Aware	内容识别	內容感知	コンテンツに応じる	내용 인식	Inhaltsbasiert	D’après le contenu	Según el contenido	Sensível ao conteúdo
+Content-Aware Fill	内容识别填充	內容感知填色	コンテンツに応じた塗りつぶし	내용 인식 채우기	Inhaltsbasierte Füllung	Remplissage d’après le contenu	Relleno según el contenido	Preenchimento sensível ao conteúdo
+Contiguous	连续	連續	隣接	인접	Benachbart	Pixels contigus	Contiguo	Adjacente
+Contract	收缩	縮小	縮小	축소	Verkleinern	Contracter	Contraer	Contrair
+Contract Selection	收缩选区	縮小選取範圍	選択範囲を縮小	선택 영역 축소	Auswahl verkleinern	Contracter la sélection	Contraer selección	Contrair seleção
+Contrast	对比度	對比	コントラスト	대비	Kontrast	Contraste	Contraste	Contraste
+Copy	复制	拷貝	コピー	복사	Kopieren	Copier	Copiar	Copiar
+Copy %1$@	复制%1$@	拷貝%1$@	%1$@をコピー	%1$@ 복사	%1$@ kopieren	Copier %1$@	Copiar %1$@	Copiar %1$@
+Copy Layer Mask	复制图层蒙版	拷貝圖層遮色片	レイヤーマスクをコピー	레이어 마스크 복사	Ebenenmaske kopieren	Copier le masque de fusion	Copiar máscara de capa	Copiar máscara de camada
+Copy Merged	合并拷贝	拷貝合併	結合部分をコピー	병합하여 복사	Auf eine Ebene reduziert kopieren	Copier avec fusion	Copiar combinado	Copiar mesclado
+Create Clipping Mask	创建剪贴蒙版	建立剪裁遮色片	クリッピングマスクを作成	클리핑 마스크 만들기	Schnittmaske erstellen	Créer un masque d’écrêtage	Crear máscara de recorte	Criar máscara de corte
+Create canvas	创建画布	建立版面	カンバスを作成	캔버스 만들기	Arbeitsfläche erstellen	Créer une zone de travail	Crear lienzo	Criar tela
+Crop	裁剪	裁切	切り抜き	자르기	Freistellen	Recadrage	Recortar	Cortar
+Crop tool	裁剪工具	裁切工具	切り抜きツール	자르기 도구	Freistellungswerkzeug	Outil Recadrage	Herramienta Recortar	Ferramenta Cortar
+Current: %1$@ × %2$@ pixels	当前：%1$@ × %2$@ 像素	目前：%1$@ × %2$@ 像素	現在：%1$@ × %2$@ ピクセル	현재: %1$@ × %2$@ 픽셀	Aktuell: %1$@ × %2$@ Pixel	Actuel : %1$@ × %2$@ pixels	Actual: %1$@ × %2$@ píxeles	Atual: %1$@ × %2$@ pixels
+Curves	曲线	曲線	トーンカーブ	곡선	Gradationskurven	Courbes	Curvas	Curvas
+Custom	自定	自訂	カスタム	사용자 정의	Benutzerdefiniert	Personnalisé	Personalizado	Personalizado
+Cut	剪切	剪下	カット	잘라내기	Ausschneiden	Couper	Cortar	Recortar
+Cyan	青色	青色	シアン	사이안	Cyan	Cyan	Cian	Ciano
+Cyans	青色	青色	シアン系	사이안 계열	Cyantöne	Cyans	Cianes	Cianos
+Dark	暗	暗	暗部の色	어두운 색상	Dunkel	Foncé	Oscuro	Escuro
+Darken	变暗	變暗	比較（暗）	어둡게 하기	Abdunkeln	Obscurcir	Oscurecer	Escurecer
+Default colors	默认前景色和背景色	預設前景色與背景色	初期設定の描画色と背景色	기본 전경색 및 배경색	Standardfarben	Couleurs par défaut	Colores predeterminados	Cores padrão
+Defringe	去边	去邊	フリンジ軽減	색수차 제거	Rand entfernen	Supprimer la frange	Eliminar halos	Remover borda
+Dehaze	去朦胧	去朦朧	かすみの除去	디헤이즈	Dunst entfernen	Correction du voile	Borrar neblina	Desembaçar
+Delete	删除	刪除	削除	삭제	Löschen	Supprimer	Eliminar	Excluir
+Delete %1$@	删除%1$@	刪除%1$@	%1$@を削除	%1$@ 삭제	%1$@ löschen	Supprimer %1$@	Eliminar %1$@	Excluir %1$@
+Delete Layer	删除图层	刪除圖層	レイヤーを削除	레이어 삭제	Ebene löschen	Supprimer le calque	Eliminar capa	Excluir camada
+Delete Layer Mask	删除图层蒙版	刪除圖層遮色片	レイヤーマスクを削除	레이어 마스크 삭제	Ebenenmaske löschen	Supprimer le masque de fusion	Eliminar máscara de capa	Excluir máscara de camada
+Delete Layers	删除图层	刪除圖層	レイヤーを削除	레이어 삭제	Ebenen löschen	Supprimer les calques	Eliminar capas	Excluir camadas
+Delete Selected Layers	删除所选图层	刪除選取的圖層	選択したレイヤーを削除	선택한 레이어 삭제	Ausgewählte Ebenen löschen	Supprimer les calques sélectionnés	Eliminar capas seleccionadas	Excluir camadas selecionadas
+Density	浓度	濃度	濃度	농도	Dichte	Densité	Densidad	Densidade
+Deselect	取消选择	取消選取	選択を解除	선택 해제	Auswahl aufheben	Désélectionner	Deseleccionar	Cancelar seleção
+Detail	细节	細節	ディテール	세부 묘사	Details	Détail	Detalle	Detalhe
+Develop “%1$@”	显影“%1$@”	顯像「%1$@」	「%1$@」を現像	“%1$@” 현상	„%1$@“ entwickeln	Développer « %1$@ »	Revelar «%1$@»	Revelar “%1$@”
+Difference	差值	差異化	差の絶対値	차이	Differenz	Différence	Diferencia	Diferença
+Disable Layer Mask	停用图层蒙版	停用圖層遮色片	レイヤーマスクを無効にする	레이어 마스크 비활성화	Ebenenmaske deaktivieren	Désactiver le masque de fusion	Desactivar máscara de capa	Desativar máscara de camada
+Distance	距离	距離	距離	거리	Abstand	Distance	Distancia	Distância
+Distort	扭曲	扭曲	自由な形に	왜곡	Verzerren	Distorsion	Distorsionar	Distorcer
+Dither	仿色	混色	ディザ	디더	Dithering	Tramage	Tramado	Pontilhamento
+Divide	划分	分割	除算	나누기	Dividieren	Division	Dividir	Dividir
+Document Bounds	文档边界	文件邊界	ドキュメントの端	문서 경계	Dokumentgrenzen	Limites du document	Límites del documento	Limites do documento
+Done	完成	完成	完了	완료	Fertig	Terminé	Hecho	Concluído
+Don’t Save	不保存	不要儲存	保存しない	저장 안 함	Nicht sichern	Ne pas enregistrer	No guardar	Não salvar
+Down	下	下	下	아래	Unten	Bas	Abajo	Baixo
+Drop Shadow	投影	陰影	ドロップシャドウ	그림자 효과	Schlagschatten	Ombre portée	Sombra paralela	Sombra projetada
+Duplicate Layer	复制图层	複製圖層	レイヤーを複製	레이어 복제	Ebene duplizieren	Dupliquer le calque	Duplicar capa	Duplicar camada
+Duplicate Layers	复制图层	複製圖層	レイヤーを複製	레이어 복제	Ebenen duplizieren	Dupliquer les calques	Duplicar capas	Duplicar camadas
+Edit	编辑	編輯	編集	편집	Bearbeiten	Modifier	Editar	Editar
+Edit %1$@	编辑%1$@	編輯%1$@	%1$@を編集	%1$@ 편집	%1$@ bearbeiten	Modifier %1$@	Editar %1$@	Editar %1$@
+Edit %1$@ Adjustment	编辑%1$@调整	編輯%1$@調整	%1$@調整を編集	%1$@ 조정 편집	Einstellung %1$@ bearbeiten	Modifier le réglage %1$@	Editar ajuste %1$@	Editar ajuste %1$@
+Effects	效果	效果	効果	효과	Effekte	Effets	Efectos	Efeitos
+Ellipse	椭圆	橢圓	楕円形	타원	Ellipse	Ellipse	Elipse	Elipse
+Elliptical Marquee	椭圆选框	橢圓選取畫面	楕円形選択ツール	원형 선택 윤곽	Auswahlellipse	Ellipse de sélection	Marco elíptico	Letreiro elíptico
+Enable Layer Mask	启用图层蒙版	啟用圖層遮色片	レイヤーマスクを有効にする	레이어 마스크 활성화	Ebenenmaske aktivieren	Activer le masque de fusion	Activar máscara de capa	Ativar máscara de camada
+Eraser	橡皮擦	橡皮擦	消しゴム	지우개	Radiergummi	Gomme	Borrador	Borracha
+Exclusion	排除	排除	除外	제외	Ausschluss	Exclusion	Exclusión	Exclusão
+Expand	扩展	擴張	拡張	확대	Erweitern	Dilater	Expandir	Expandir
+Expand Selection	扩展选区	擴張選取範圍	選択範囲を拡張	선택 영역 확대	Auswahl erweitern	Dilater la sélection	Expandir selección	Expandir seleção
+Export JPEG	导出 JPEG	轉存 JPEG	JPEG を書き出し	JPEG 내보내기	JPEG exportieren	Exporter en JPEG	Exportar JPEG	Exportar JPEG
+Export PNG	导出 PNG	轉存 PNG	PNG を書き出し	PNG 내보내기	PNG exportieren	Exporter en PNG	Exportar PNG	Exportar PNG
+Export…	导出…	轉存…	書き出し…	내보내기…	Exportieren…	Exporter…	Exportar…	Exportar…
+Exposure	曝光度	曝光度	露光量	노출	Belichtung	Exposition	Exposición	Exposição
+Eyedropper	吸管	滴管	スポイト	스포이드	Pipette	Pipette	Cuentagotas	Conta-gotas
+Eyedropper tool	吸管工具	滴管工具	スポイトツール	스포이드 도구	Pipette-Werkzeug	Outil Pipette	Herramienta Cuentagotas	Ferramenta Conta-gotas
+Feather	羽化	羽化	ぼかし	페더	Weiche Kante	Contour progressif	Desvanecer	Difusão
+Feather Selection	羽化选区	羽化選取範圍	選択範囲の境界をぼかす	선택 영역 페더	Auswahlkante weichzeichnen	Contour progressif de la sélection	Desvanecer selección	Difundir seleção
+Fill	填充	填滿	塗り	칠	Fläche	Fond	Relleno	Preenchimento
+Fill with Background Color	使用背景色填充	以背景色填滿	背景色で塗りつぶし	배경색으로 채우기	Mit Hintergrundfarbe füllen	Remplir avec la couleur d’arrière-plan	Rellenar con color de fondo	Preencher com a cor do plano de fundo
+Fill with Foreground Color	使用前景色填充	以前景色填滿	描画色で塗りつぶし	전경색으로 채우기	Mit Vordergrundfarbe füllen	Remplir avec la couleur de premier plan	Rellenar con color frontal	Preencher com a cor do primeiro plano
+Filter	滤镜	濾鏡	フィルター	필터	Filter	Filtre	Filtro	Filtro
+Fit Canvas	画布适合窗口	版面符合視窗	カンバスを画面に合わせる	캔버스를 창에 맞추기	Arbeitsfläche einpassen	Adapter la zone de travail	Encajar lienzo	Ajustar tela à janela
+Flip Canvas Horizontal	水平翻转画布	水平翻轉版面	カンバスを左右に反転	캔버스 가로로 뒤집기	Arbeitsfläche horizontal spiegeln	Symétrie horizontale de la zone de travail	Voltear lienzo horizontal	Virar tela horizontalmente
+Flip Canvas Vertical	垂直翻转画布	垂直翻轉版面	カンバスを上下に反転	캔버스 세로로 뒤집기	Arbeitsfläche vertikal spiegeln	Symétrie verticale de la zone de travail	Voltear lienzo vertical	Virar tela verticalmente
+Flip Horizontal	水平翻转	水平翻轉	左右に反転	가로로 뒤집기	Horizontal spiegeln	Symétrie horizontale	Voltear horizontal	Virar horizontalmente
+Flip Vertical	垂直翻转	垂直翻轉	上下に反転	세로로 뒤집기	Vertikal spiegeln	Symétrie verticale	Voltear vertical	Virar verticalmente
+Folder	组	群組	グループ	그룹	Gruppe	Groupe	Grupo	Grupo
+Folder %1$@	组 %1$@	群組 %1$@	グループ %1$@	그룹 %1$@	Gruppe %1$@	Groupe %1$@	Grupo %1$@	Grupo %1$@
+Follow System	跟随系统	跟隨系統	システム設定に従う	시스템 설정 따르기	Systemeinstellung verwenden	Suivre le système	Seguir el sistema	Seguir o sistema
+Font	字体	字型	フォント	글꼴	Schriftart	Police	Fuente	Fonte
+Foreground	前景色	前景色	描画色	전경색	Vordergrund	Premier plan	Frontal	Primeiro plano
+Foreground color	前景色	前景色	描画色	전경색	Vordergrundfarbe	Couleur de premier plan	Color frontal	Cor do primeiro plano
+Foreground to Background	前景色到背景色	前景色至背景色	描画色から背景色へ	전경색에서 배경색으로	Vordergrund zu Hintergrund	Premier plan vers arrière-plan	Frontal a fondo	Primeiro plano para plano de fundo
+Foreground to Transparent	前景色到透明	前景色至透明	描画色から透明へ	전경색에서 투명으로	Vordergrund zu Transparent	Premier plan vers transparent	Frontal a transparente	Primeiro plano para transparente
+Free	自由	自由	自由	자유	Frei	Libre	Libre	Livre
+Fuzziness	颜色容差	朦朧	許容量	허용량	Toleranz	Tolérance	Tolerancia	Grau de seleção
+Gamma	灰度系数	Gamma	ガンマ	감마	Gamma	Gamma	Gamma	Gama
+Gaussian	高斯分布	高斯	正規分布	가우시안	Gaußsche Normalverteilung	Gaussienne	Gaussiano	Gaussiano
+Gaussian Blur	高斯模糊	高斯模糊	ぼかし（ガウス）	가우시안 흐림 효과	Gaußscher Weichzeichner	Flou gaussien	Desenfoque gaussiano	Desfoque gaussiano
+Geometry	几何	幾何	ジオメトリ	기하학	Geometrie	Géométrie	Geometría	Geometria
+Gradient	渐变	漸層	グラデーション	그레이디언트	Verlauf	Dégradé	Degradado	Degradê
+Gradient Map	渐变映射	漸層對應	グラデーションマップ	그레이디언트 맵	Verlaufsumsetzung	Courbe de transfert de dégradé	Mapa de degradado	Mapa de degradê
+Gradient tool	渐变工具	漸層工具	グラデーションツール	그레이디언트 도구	Verlaufswerkzeug	Outil Dégradé	Herramienta Degradado	Ferramenta Degradê
+Grain	颗粒	顆粒	粒子	그레인	Körnung	Grain	Granulado	Granulação
+Gray	灰色	灰色	グレー	회색	Grau	Gris	Gris	Cinza
+Green	绿色	綠色	グリーン	녹색	Grün	Vert	Verde	Verde
+Green Amount	绿色数量	綠色總量	緑の適用量	녹색 양	Grün-Intensität	Quantité de vert	Cantidad de verde	Intensidade do verde
+Green Hue	绿色色相	綠色色相	緑の色相	녹색 색조	Grün-Farbton	Teinte verte	Tono verde	Matiz verde
+Green Primary	绿原色	綠色原色	グリーン原色	녹색 원색	Primärwert Grün	Vert primaire	Verde primario	Verde primário
+Greens	绿色	綠色	グリーン系	녹색 계열	Grüntöne	Verts	Verdes	Verdes
+Grid	网格	格點	グリッド	격자	Raster	Grille	Cuadrícula	Grade
+Grid Settings…	网格设置…	格點設定…	グリッド設定…	격자 설정…	Rastereinstellungen…	Paramètres de la grille…	Ajustes de cuadrícula…	Configurações da grade…
+Group Layers	编组图层	群組圖層	レイヤーをグループ化	레이어 그룹화	Ebenen gruppieren	Associer les calques	Agrupar capas	Agrupar camadas
+Guides	参考线	參考線	ガイド	안내선	Hilfslinien	Repères	Guías	Guias
+Hand tool	抓手工具	手形工具	手のひらツール	손 도구	Hand-Werkzeug	Outil Main	Herramienta Mano	Ferramenta Mão
+Hard Light	强光	實光	ハードライト	하드 라이트	Hartes Licht	Lumière crue	Luz fuerte	Luz direta
+Hard Mix	实色混合	實色疊印混合	ハードミックス	하드 혼합	Hart mischen	Mélange maximal	Mezcla definida	Mistura sólida
+Hardness	硬度	硬度	硬さ	경도	Härte	Dureté	Dureza	Dureza
+Height	高度	高度	高さ	높이	Höhe	Hauteur	Altura	Altura
+Hide %1$@	隐藏%1$@	隱藏%1$@	%1$@を非表示	%1$@ 숨기기	%1$@ ausblenden	Masquer %1$@	Ocultar %1$@	Ocultar %1$@
+Hide All (Black)	隐藏全部（黑色）	隱藏全部（黑色）	すべてを隠す（黒）	모두 숨기기(검정)	Alles ausblenden (Schwarz)	Tout masquer (noir)	Ocultar todo (negro)	Ocultar tudo (preto)
+Hide Compositor	隐藏 Compositor	隱藏 Compositor	Compositor を非表示	Compositor 가리기	Compositor ausblenden	Masquer Compositor	Ocultar Compositor	Ocultar Compositor
+Hide Layer	隐藏图层	隱藏圖層	レイヤーを非表示	레이어 숨기기	Ebene ausblenden	Masquer le calque	Ocultar capa	Ocultar camada
+Hide Others	隐藏其他	隱藏其他	ほかを非表示	기타 가리기	Andere ausblenden	Masquer les autres	Ocultar otros	Ocultar outros
+Hide Selection	隐藏选区	隱藏選取範圍	選択範囲を隠す	선택 영역 숨기기	Auswahl ausblenden	Masquer la sélection	Ocultar selección	Ocultar seleção
+Highlights	高光	亮部	ハイライト	밝은 영역	Lichter	Tons clairs	Iluminaciones	Realces
+Histogram	直方图	色階分佈圖	ヒストグラム	히스토그램	Histogramm	Histogramme	Histograma	Histograma
+Horizontal	水平	水平	水平方向	가로	Horizontal	Horizontal	Horizontal	Horizontal
+Hue	色相	色相	色相	색조	Farbton	Teinte	Tono	Matiz
+Hue/Saturation	色相/饱和度	色相／飽和度	色相・彩度	색조/채도	Farbton/Sättigung	Teinte/Saturation	Tono/Saturación	Matiz/Saturação
+Image	图像	影像	画像	이미지	Bild	Image	Imagen	Imagem
+Image Size	图像大小	影像尺寸	画像解像度	이미지 크기	Bildgröße	Taille de l’image	Tamaño de imagen	Tamanho da imagem
+Import	导入	讀入	読み込み	가져오기	Importieren	Importer	Importar	Importar
+Import Image	导入图像	讀入影像	画像を読み込み	이미지 가져오기	Bild importieren	Importer une image	Importar imagen	Importar imagem
+Import Images	导入图像	讀入影像	画像を読み込み	이미지 가져오기	Bilder importieren	Importer des images	Importar imágenes	Importar imagens
+Import Photoshop File	导入 Photoshop 文件	讀入 Photoshop 檔案	Photoshop ファイルを読み込み	Photoshop 파일 가져오기	Photoshop-Datei importieren	Importer un fichier Photoshop	Importar archivo de Photoshop	Importar arquivo do Photoshop
+Importing images…	正在导入图像…	正在讀入影像…	画像を読み込み中…	이미지 가져오는 중…	Bilder werden importiert…	Importation des images…	Importando imágenes…	Importando imagens…
+Inches	英寸	英吋	インチ	인치	Zoll	Pouces	Pulgadas	Polegadas
+Inner Glow	内发光	內光暈	光彩（内側）	내부 광선	Schein nach innen	Lueur interne	Resplandor interior	Brilho interno
+Inner Shadow	内阴影	內陰影	シャドウ（内側）	내부 그림자	Schatten nach innen	Ombre interne	Sombra interior	Sombra interna
+Input black	输入黑场	輸入黑色點	入力ブラックポイント	입력 검정점	Eingabeschwarzpunkt	Noir d’entrée	Negro de entrada	Preto de entrada
+Input white	输入白场	輸入白色點	入力ホワイトポイント	입력 흰점	Eingabeweißpunkt	Blanc d’entrée	Blanco de entrada	Branco de entrada
+Inside	内部	內部	内側	안쪽	Innen	Intérieur	Interior	Interna
+Inverse	反选	反轉選取	選択範囲を反転	선택 영역 반전	Auswahl umkehren	Intervertir	Invertir selección	Inverter seleção
+Inverse Selection	反选选区	反轉選取範圍	選択範囲を反転	선택 영역 반전	Auswahl umkehren	Intervertir la sélection	Invertir selección	Inverter seleção
+Invert	反相	負片效果	階調の反転	반전	Umkehren	Négatif	Invertir	Inverter
+Invert Mask	反相蒙版	反轉遮色片	マスクを反転	마스크 반전	Maske umkehren	Inverser le masque	Invertir máscara	Inverter máscara
+Keep Mine	保留当前版本	保留目前版本	現在の内容を保持	현재 버전 유지	Eigene Version behalten	Conserver ma version	Conservar mi versión	Manter minha versão
+Keyboard Shortcuts	键盘快捷键	鍵盤快速鍵	キーボードショートカット	키보드 단축키	Tastaturbefehle	Raccourcis clavier	Métodos abreviados de teclado	Atalhos de teclado
+Language	语言	語言	言語	언어	Sprache	Langue	Idioma	Idioma
+Language Changed	语言已更改	語言已變更	言語を変更しました	언어가 변경되었습니다	Sprache geändert	Langue modifiée	Idioma cambiado	Idioma alterado
+Lasso	套索	套索	なげなわ	올가미	Lasso	Lasso	Lazo	Laço
+Layer	图层	圖層	レイヤー	레이어	Ebene	Calque	Capa	Camada
+Layer %1$@	图层 %1$@	圖層 %1$@	レイヤー %1$@	레이어 %1$@	Ebene %1$@	Calque %1$@	Capa %1$@	Camada %1$@
+Layer Blend Mode	图层混合模式	圖層混合模式	レイヤーの描画モード	레이어 혼합 모드	Ebenenfüllmethode	Mode de fusion du calque	Modo de fusión de capa	Modo de mesclagem da camada
+Layer Effects	图层样式	圖層樣式	レイヤースタイル	레이어 스타일	Ebenenstil	Style de calque	Estilo de capa	Estilo de camada
+Layer Mask	图层蒙版	圖層遮色片	レイヤーマスク	레이어 마스크	Ebenenmaske	Masque de fusion	Máscara de capa	Máscara de camada
+Layer Opacity	图层不透明度	圖層不透明度	レイヤーの不透明度	레이어 불투명도	Ebenendeckkraft	Opacité du calque	Opacidad de capa	Opacidade da camada
+Layer via Copy	通过拷贝的图层	拷貝的圖層	選択範囲をコピーしたレイヤー	복사한 레이어	Ebene durch Kopieren	Calque par copier	Capa vía copiar	Camada por cópia
+Layer's Pixels	图层像素	圖層像素	レイヤーのピクセル	레이어 픽셀	Ebenenpixel	Pixels du calque	Píxeles de la capa	Pixels da camada
+Layers	图层	圖層	レイヤー	레이어	Ebenen	Calques	Capas	Camadas
+Leading	行距	行距	行送り	행간	Zeilenabstand	Interligne	Interlineado	Entrelinha
+Left	左	左	左	왼쪽	Links	Gauche	Izquierda	Esquerda
+Levels	色阶	色階	レベル補正	레벨	Tonwertkorrektur	Niveaux	Niveles	Níveis
+Light	光线	光線	ライト	밝기	Licht	Lumière	Luz	Luz
+Lighten	变亮	變亮	比較（明）	밝게 하기	Aufhellen	Éclaircir	Aclarar	Clarear
+Lightness	明度	明度	明度	명도	Helligkeit	Luminosité	Luminosidad	Luminosidade
+Line	直线	直線	直線	선	Linie	Trait	Línea	Linha
+Linear	线性	線性	線形	선형	Linear	Linéaire	Lineal	Linear
+Linear Burn	线性加深	線性加深	焼き込み（リニア）	선형 번	Linear nachbelichten	Densité linéaire +	Subexposición lineal	Superexposição linear
+Linear Dodge (Add)	线性减淡（添加）	線性加亮（增加）	覆い焼き（リニア）- 加算	선형 닷지(추가)	Linear abwedeln (Addieren)	Densité linéaire − (Ajout)	Sobreexposición lineal (Añadir)	Subexposição linear (Adicionar)
+Linear Light	线性光	線性光源	リニアライト	선형 라이트	Lineares Licht	Lumière linéaire	Luz lineal	Luz linear
+Link Layer Mask	链接图层蒙版	連結圖層遮色片	レイヤーマスクをリンク	레이어 마스크 연결	Ebenenmaske verknüpfen	Lier le masque de fusion	Enlazar máscara de capa	Vincular máscara de camada
+Liquify	液化	液化	ゆがみ	픽셀 유동화	Verflüssigen	Fluidité	Licuar	Dissolver
+Lock Guides	锁定参考线	鎖定參考線	ガイドをロック	안내선 잠그기	Hilfslinien sperren	Verrouiller les repères	Bloquear guías	Bloquear guias
+Luminance	明亮度	明度	輝度	광도	Luminanz	Luminance	Luminancia	Luminância
+Luminosity	明度	明度	輝度	광도	Luminanz	Luminosité	Luminosidad	Luminosidade
+Magenta	洋红	洋紅	マゼンタ	마젠타	Magenta	Magenta	Magenta	Magenta
+Magentas	洋红	洋紅	マゼンタ系	마젠타 계열	Magentatöne	Magentas	Magentas	Magentas
+Magic Wand	魔棒	魔術棒	自動選択	자동 선택	Zauberstab	Baguette magique	Varita mágica	Varinha mágica
+Manual	手动	手動	手動	수동	Manuell	Manuel	Manual	Manual
+Marquee	选框	選取畫面	選択範囲	선택 윤곽	Auswahlrechteck	Sélection	Marco	Letreiro
+Mask	蒙版	遮色片	マスク	마스크	Maske	Masque	Máscara	Máscara
+Mask's Black Areas	蒙版的黑色区域	遮色片的黑色區域	マスクの黒い領域	마스크의 검은 영역	Schwarze Maskenbereiche	Zones noires du masque	Áreas negras de la máscara	Áreas pretas da máscara
+Masking	蒙版	遮色片	マスク	마스크	Maskieren	Masquage	Máscara	Máscara
+Master	全图	主版	マスター	마스터	Standard	Global	Todos	Principal
+Menus	菜单	選單	メニュー	메뉴	Menüs	Menus	Menús	Menus
+Merge Down	向下合并	向下合併	下のレイヤーと結合	아래 레이어와 병합	Mit darunter liegender auf eine Ebene reduzieren	Fusionner avec le calque inférieur	Combinar hacia abajo	Mesclar para baixo
+Merge Group	合并组	合併群組	グループを結合	그룹 병합	Gruppe zusammenfügen	Fusionner le groupe	Combinar grupo	Mesclar grupo
+Merge Layers	合并图层	合併圖層	レイヤーを結合	레이어 병합	Ebenen zusammenfügen	Fusionner les calques	Combinar capas	Mesclar camadas
+Midtones	中间调	中間調	中間調	중간 영역	Mitteltöne	Tons moyens	Medios tonos	Tons médios
+Monochromatic	单色	單色	グレースケールノイズ	단색	Monochrom	Monochromatique	Monocromático	Monocromático
+Motion Blur	动感模糊	動態模糊	ぼかし（移動）	동작 흐림 효과	Bewegungsunschärfe	Flou directionnel	Desenfoque de movimiento	Desfoque de movimento
+Move / Transform tool	移动 / 变换工具	移動／變形工具	移動／変形ツール	이동/변형 도구	Verschieben-/Transformieren-Werkzeug	Outil Déplacement/Transformation	Herramienta Mover/Transformar	Ferramenta Mover/Transformar
+Move Layer Down	下移图层	下移圖層	レイヤーを下へ	레이어 아래로 이동	Ebene nach unten	Descendre le calque	Bajar capa	Mover camada para baixo
+Move Layer Up	上移图层	上移圖層	レイヤーを上へ	레이어 위로 이동	Ebene nach oben	Monter le calque	Subir capa	Mover camada para cima
+Move Out of Folder	移出组	移出群組	グループから移動	그룹 밖으로 이동	Aus Gruppe verschieben	Sortir du groupe	Sacar del grupo	Mover para fora do grupo
+Multiply	正片叠底	色彩增值	乗算	곱하기	Multiplizieren	Produit	Multiplicar	Multiplicação
+Nearest	邻近（硬边缘）	最接近像素	ニアレストネイバー法	최단입점	Pixelwiederholung	Au plus proche	Por aproximación	Vizinho mais próximo
+New	新建	新增	新規	새로 만들기	Neu	Nouveau	Nuevo	Novo
+New %1$@ Adjustment	新建%1$@调整	新增%1$@調整	新規調整：%1$@	새 %1$@ 조정	Neue Einstellung: %1$@	Nouveau réglage : %1$@	Nuevo ajuste: %1$@	Novo ajuste: %1$@
+New Adjustment Layer	新建调整图层	新增調整圖層	新規調整レイヤー	새 조정 레이어	Neue Einstellungsebene	Nouveau calque de réglage	Nueva capa de ajuste	Nova camada de ajuste
+New Blank Layer	新建空白图层	新增空白圖層	新規空白レイヤー	새 빈 레이어	Neue leere Ebene	Nouveau calque vide	Nueva capa vacía	Nova camada vazia
+New Canvas	新建画布	新增版面	新規カンバス	새 캔버스	Neue Arbeitsfläche	Nouvelle zone de travail	Nuevo lienzo	Nova tela
+New Folder	新建组	新增群組	新規グループ	새 그룹	Neue Gruppe	Nouveau groupe	Nuevo grupo	Novo grupo
+New Text Layer	新建文字图层	新增文字圖層	新規テキストレイヤー	새 텍스트 레이어	Neue Textebene	Nouveau calque de texte	Nueva capa de texto	Nova camada de texto
+No layers yet	暂无图层	尚無圖層	レイヤーはまだありません	아직 레이어가 없습니다	Noch keine Ebenen	Aucun calque pour le moment	Aún no hay capas	Ainda não há camadas
+Noise Reduction	减少杂色	減少雜訊	ノイズ軽減	노이즈 감소	Rauschreduzierung	Réduction du bruit	Reducción de ruido	Redução de ruído
+Normal	正常	正常	通常	표준	Normal	Normal	Normal	Normal
+OK	确定	確定	OK	확인	OK	OK	OK	OK
+Object Selection	对象选择	物件選取	オブジェクト選択	개체 선택	Objektauswahl	Sélection d’objet	Selección de objetos	Seleção de objeto
+Opacity	不透明度	不透明度	不透明度	불투명도	Deckkraft	Opacité	Opacidad	Opacidade
+Open Project	打开项目	開啟專案	プロジェクトを開く	프로젝트 열기	Projekt öffnen	Ouvrir un projet	Abrir proyecto	Abrir projeto
+Open Recent	打开最近使用	開啟最近使用	最近使った項目を開く	최근 항목 열기	Zuletzt geöffnet	Ouvrir les fichiers récents	Abrir recientes	Abrir recentes
+Open “%1$@”?	打开“%1$@”？	開啟「%1$@」？	「%1$@」を開きますか？	“%1$@”을(를) 여시겠습니까?	„%1$@“ öffnen?	Ouvrir « %1$@ » ?	¿Abrir «%1$@»?	Abrir “%1$@”?
+Optics	光学	光學	レンズ	광학	Optik	Optique	Óptica	Ótica
+Oranges	橙色	橙色	オレンジ	주황 계열	Orangetöne	Oranges	Naranjas	Laranjas
+Original	原始	原始	元画像	원본	Original	Original	Original	Original
+Outer Glow	外发光	外光暈	光彩（外側）	외부 광선	Schein nach außen	Lueur externe	Resplandor exterior	Brilho externo
+Output black	输出黑场	輸出黑色點	出力ブラックポイント	출력 검정점	Ausgabeschwarzpunkt	Noir de sortie	Negro de salida	Preto de saída
+Output white	输出白场	輸出白色點	出力ホワイトポイント	출력 흰점	Ausgabeweißpunkt	Blanc de sortie	Blanco de salida	Branco de saída
+Outside	外部	外部	外側	바깥쪽	Außen	Extérieur	Exterior	Externa
+Overlay	叠加	覆蓋	オーバーレイ	오버레이	Ineinanderkopieren	Incrustation	Superponer	Sobrepor
+Paste	粘贴	貼上	ペースト	붙여넣기	Einfügen	Coller	Pegar	Colar
+Percent	百分比	百分比	パーセント	퍼센트	Prozent	Pourcentage	Porcentaje	Porcentagem
+Perspective	透视	透視	遠近法	원근	Perspektivisch	Perspective	Perspectiva	Perspectiva
+Pin Light	点光	小光源	ピンライト	핀 라이트	Lichtpunkt	Lumière ponctuelle	Luz focal	Luz do pino
+Pixels	像素	像素	ピクセル	픽셀	Pixel	Pixels	Píxeles	Pixels
+Point Color	点颜色	點顏色	ポイントカラー	포인트 색상	Punktfarbe	Couleur du point	Color de punto	Cor pontual
+Point Sample	取样点	取樣點	指定したピクセル	포인트 샘플	Punktaufnahme	Échantillon ponctuel	De 1 punto	Amostra de ponto
+Polygonal Lasso	多边形套索	多邊形套索	多角形選択ツール	다각형 올가미	Polygon-Lasso	Lasso polygonal	Lazo poligonal	Laço poligonal
+Position	位置	位置	位置	위치	Position	Position	Posición	Posição
+Preserve Luminosity	保持明度	保留明度	輝度を保持	광도 유지	Luminanz erhalten	Conserver la luminosité	Conservar luminosidad	Preservar luminosidade
+Preview	预览	預視	プレビュー	미리 보기	Vorschau	Aperçu	Previsualizar	Visualizar
+Purple Amount	紫色数量	紫色總量	紫色の適用量	보라 양	Violett-Intensität	Quantité de violet	Cantidad de púrpura	Intensidade do roxo
+Purple Hue	紫色色相	紫色色相	紫色の色相	보라 색조	Violett-Farbton	Teinte violette	Tono púrpura	Matiz roxo
+Purples	紫色	紫色	パープル	보라 계열	Lilatöne	Violets	Púrpuras	Roxos
+RGB histogram	RGB 直方图	RGB 色階分佈圖	RGB ヒストグラム	RGB 히스토그램	RGB-Histogramm	Histogramme RVB	Histograma RGB	Histograma RGB
+Radial	径向	放射狀	円形	방사형	Radial	Radial	Radial	Radial
+Radius	半径	半徑	半径	반경	Radius	Rayon	Radio	Raio
+Ready when you are	准备就绪	準備就緒	準備完了	준비 완료	Bereit	Prêt	Listo	Pronto
+Rectangle	矩形	矩形	長方形	사각형	Rechteck	Rectangle	Rectángulo	Retângulo
+Rectangular Marquee	矩形选框	矩形選取畫面	長方形選択ツール	사각형 선택 윤곽	Auswahlrechteck	Rectangle de sélection	Marco rectangular	Letreiro retangular
+Rectilinear	直线	直線	直線	직선	Geradlinig	Rectilinéaire	Rectilínea	Retilínea
+Red	红色	紅色	レッド	빨강	Rot	Rouge	Rojo	Vermelho
+Red Primary	红原色	紅色原色	レッド原色	빨강 원색	Primärwert Rot	Rouge primaire	Rojo primario	Vermelho primário
+Redo	重做	重做	やり直し	다시 실행	Wiederholen	Rétablir	Rehacer	Refazer
+Redo %1$@	重做%1$@	重做%1$@	%1$@をやり直す	%1$@ 다시 실행	%1$@ wiederholen	Rétablir %1$@	Rehacer %1$@	Refazer %1$@
+Reds	红色	紅色	レッド系	빨강 계열	Rottöne	Rouges	Rojos	Vermelhos
+Release Clipping Mask	释放剪贴蒙版	釋放剪裁遮色片	クリッピングマスクを解除	클리핑 마스크 해제	Schnittmaske zurückwandeln	Annuler le masque d’écrêtage	Soltar máscara de recorte	Liberar máscara de corte
+Remove	移除	移除	削除	제거	Entfernen	Retirer	Quitar	Remover
+Remove %1$@	移除%1$@	移除%1$@	%1$@を削除	%1$@ 제거	%1$@ entfernen	Retirer %1$@	Quitar %1$@	Remover %1$@
+Remove Background	移除背景	移除背景	背景を削除	배경 제거	Hintergrund entfernen	Supprimer l’arrière-plan	Quitar fondo	Remover plano de fundo
+Remove Chromatic Aberration	删除色差	移除色差	色収差を除去	색수차 제거	Chromatische Aberration entfernen	Supprimer l’aberration chromatique	Quitar aberración cromática	Remover desvio cromático
+Rename Layer	重命名图层	重新命名圖層	レイヤー名を変更	레이어 이름 바꾸기	Ebene umbenennen	Renommer le calque	Cambiar nombre de capa	Renomear camada
+Replace Layer Mask	替换图层蒙版	取代圖層遮色片	レイヤーマスクを置き換え	레이어 마스크 바꾸기	Ebenenmaske ersetzen	Remplacer le masque de fusion	Reemplazar máscara de capa	Substituir máscara de camada
+Resample	重新采样	重新取樣	再サンプル	리샘플링	Neu berechnen	Rééchantillonnage	Remuestrear	Reamostrar
+Reset	重置	重設	リセット	재설정	Zurücksetzen	Réinitialiser	Restablecer	Redefinir
+Resolution	分辨率	解析度	解像度	해상도	Auflösung	Résolution	Resolución	Resolução
+Restore Defaults	恢复默认设置	還原預設值	初期設定に戻す	기본값 복원	Standard wiederherstellen	Rétablir les valeurs par défaut	Restaurar valores predeterminados	Restaurar padrões
+Result: %1$@ × %2$@ pixels	结果：%1$@ × %2$@ 像素	結果：%1$@ × %2$@ 像素	結果：%1$@ × %2$@ ピクセル	결과: %1$@ × %2$@ 픽셀	Ergebnis: %1$@ × %2$@ Pixel	Résultat : %1$@ × %2$@ pixels	Resultado: %1$@ × %2$@ píxeles	Resultado: %1$@ × %2$@ pixels
+Reveal All (White)	显示全部（白色）	顯示全部（白色）	すべてを表示（白）	모두 표시(흰색)	Alles einblenden (Weiß)	Tout faire apparaître (blanc)	Descubrir todo (blanco)	Revelar tudo (branco)
+Reveal Selection	显示选区	顯示選取範圍	選択範囲を表示	선택 영역 표시	Auswahl einblenden	Faire apparaître la sélection	Descubrir selección	Revelar seleção
+Revert	恢复	回復	復帰	되돌리기	Zurücksetzen	Rétablir	Revertir	Reverter
+Right	右	右	右	오른쪽	Rechts	Droite	Derecha	Direita
+Rotate	旋转	旋轉	回転	회전	Drehen	Rotation	Rotar	Girar
+Rulers	标尺	尺標	定規	눈금자	Lineale	Règles	Reglas	Réguas
+Sample	取样	取樣	サンプル	샘플	Aufnehmen	Échantillon	Muestra	Amostra
+Sample Size	取样大小	取樣大小	サンプル範囲	샘플 크기	Aufnahmebereich	Taille de l’échantillon	Tamaño de muestra	Tamanho da amostra
+Saturation	饱和度	飽和度	彩度	채도	Sättigung	Saturation	Saturación	Saturação
+Save	保存	儲存	保存	저장	Speichern	Enregistrer	Guardar	Salvar
+Save As	另存为	另存新檔	別名で保存	다른 이름으로 저장	Speichern unter	Enregistrer sous	Guardar como	Salvar como
+Save Project	保存项目	儲存專案	プロジェクトを保存	프로젝트 저장	Projekt speichern	Enregistrer le projet	Guardar proyecto	Salvar projeto
+Save Project As	项目另存为	專案另存新檔	プロジェクトを別名で保存	다른 이름으로 프로젝트 저장	Projekt speichern unter	Enregistrer le projet sous	Guardar proyecto como	Salvar projeto como
+Save changes to %1$@?	要保存对“%1$@”的更改吗？	要儲存對「%1$@」的變更嗎？	「%1$@」への変更を保存しますか？	“%1$@”의 변경 사항을 저장하시겠습니까?	Änderungen an „%1$@“ speichern?	Enregistrer les modifications apportées à « %1$@ » ?	¿Guardar los cambios en «%1$@»?	Salvar as alterações em “%1$@”?
+Scale	缩放	縮放	拡大・縮小	크기 조절	Skalieren	Échelle	Escala	Escala
+Screen	滤色	濾色	スクリーン	스크린	Negativ multiplizieren	Superposition	Trama	Divisão
+Search shortcuts	搜索快捷键	搜尋快速鍵	ショートカットを検索	단축키 검색	Tastaturbefehle suchen	Rechercher un raccourci	Buscar atajos	Pesquisar atalhos
+Select	选择	選取	選択範囲	선택	Auswahl	Sélection	Selección	Selecionar
+Select All	全部选择	全選	すべてを選択	모두 선택	Alles auswählen	Tout sélectionner	Seleccionar todo	Selecionar tudo
+Select Subject	选择主体	選取主體	被写体を選択	피사체 선택	Motiv auswählen	Sélectionner un sujet	Seleccionar sujeto	Selecionar assunto
+Select image: %1$@	选择图像：%1$@	選取影像：%1$@	画像を選択：%1$@	이미지 선택: %1$@	Bild auswählen: %1$@	Sélectionner l’image : %1$@	Seleccionar imagen: %1$@	Selecionar imagem: %1$@
+Select text: %1$@	选择文字：%1$@	選取文字：%1$@	テキストを選択：%1$@	텍스트 선택: %1$@	Text auswählen: %1$@	Sélectionner le texte : %1$@	Seleccionar texto: %1$@	Selecionar texto: %1$@
+Select tool	选择工具	選取工具	選択ツール	선택 도구	Auswahlwerkzeug	Outil Sélection	Herramienta Selección	Ferramenta Seleção
+Shadows	阴影	陰影	シャドウ	어두운 영역	Tiefen	Tons foncés	Sombras	Sombras
+Shape	形状	形狀	シェイプ	모양	Form	Forme	Forma	Forma
+Shape tool	形状工具	形狀工具	シェイプツール	모양 도구	Form-Werkzeug	Outil Forme	Herramienta Forma	Ferramenta Forma
+Sharpening	锐化	銳利化	シャープ	선명 효과	Schärfen	Netteté	Enfoque	Nitidez
+Show	显示	顯示	表示	표시	Anzeigen	Afficher	Mostrar	Mostrar
+Show %1$@	显示%1$@	顯示%1$@	%1$@を表示	%1$@ 표시	%1$@ anzeigen	Afficher %1$@	Mostrar %1$@	Mostrar %1$@
+Show All	显示全部	顯示全部	すべて表示	모두 표시	Alle einblenden	Tout afficher	Mostrar todo	Mostrar tudo
+Show Grid	显示网格	顯示格點	グリッドを表示	격자 표시	Raster anzeigen	Afficher la grille	Mostrar cuadrícula	Mostrar grade
+Show Guides	显示参考线	顯示參考線	ガイドを表示	안내선 표시	Hilfslinien anzeigen	Afficher les repères	Mostrar guías	Mostrar guias
+Show Layer	显示图层	顯示圖層	レイヤーを表示	레이어 표시	Ebene einblenden	Afficher le calque	Mostrar capa	Mostrar camada
+Show Rulers	显示标尺	顯示尺標	定規を表示	눈금자 표시	Lineale anzeigen	Afficher les règles	Mostrar reglas	Mostrar réguas
+Show Transform Controls	显示变换控件	顯示變形控制項	バウンディングボックスを表示	변형 컨트롤 표시	Transformationssteuerungen anzeigen	Afficher les options de transformation	Mostrar controles de transformación	Mostrar controles de transformação
+Size	大小	大小	サイズ	크기	Größe	Taille	Tamaño	Tamanho
+Smooth	平滑	平滑	滑らかに	매끄럽게	Abrunden	Lisser	Suavizar	Suavizar
+Smoothing	平滑	平滑	滑らかさ	매끄럽게 하기	Glättung	Lissage	Suavizado	Suavização
+Smudge	涂抹	塗抹	指先	손가락	Wischfinger	Doigt	Dedo	Borrar
+Snap	对齐	靠齊	スナップ	스냅	Ausrichten	Magnétisme	Ajustar	Ajustar
+Snap To	对齐到	靠齊至	スナップ先	스냅 대상	Ausrichten an	Magnétisme de	Ajustar a	Ajustar a
+Soft Light	柔光	柔光	ソフトライト	소프트 라이트	Weiches Licht	Lumière tamisée	Luz suave	Luz indireta
+Spot Healing	污点修复画笔	污點修復筆刷	スポット修復ブラシ	스팟 복구 브러시	Bereichsreparatur-Pinsel	Correcteur localisé	Pincel corrector puntual	Pincel de recuperação para manchas
+Spread	扩展	擴散	スプレッド	스프레드	Überfüllen	Grossi	Extensión	Expansão
+Strength	强度	強度	強さ	강도	Stärke	Intensité	Intensidad	Intensidade
+Stroke	描边	筆畫	境界線	획	Kontur	Contour	Trazo	Traçado
+Subject	主体	主體	被写体	피사체	Motiv	Sujet	Sujeto	Assunto
+Subtract	减去	減去	減算	빼기	Subtrahieren	Soustraction	Restar	Subtrair
+Temperature	色温	色溫	色温度	색온도	Temperatur	Température	Temperatura	Temperatura
+Text	文字	文字	テキスト	텍스트	Text	Texte	Texto	Texto
+Text Editing	文字编辑	文字編輯	テキスト編集	텍스트 편집	Textbearbeitung	Édition de texte	Edición de texto	Edição de texto
+Texture	纹理	紋理	テクスチャ	텍스처	Struktur	Texture	Textura	Textura
+The font “%1$@” isn’t installed, so the text was drawn with the system font.	尚未安装字体“%1$@”，已改用系统字体绘制文字。	尚未安裝字型「%1$@」，已改用系統字型繪製文字。	フォント「%1$@」がインストールされていないため、システムフォントを使用しました。	“%1$@” 글꼴이 설치되어 있지 않아 시스템 글꼴로 표시했습니다.	Die Schrift „%1$@“ ist nicht installiert. Der Text wurde mit der Systemschrift dargestellt.	La police « %1$@ » n’est pas installée. Le texte utilise donc la police système.	La fuente «%1$@» no está instalada. Se ha utilizado la fuente del sistema.	A fonte “%1$@” não está instalada. O texto foi renderizado com a fonte do sistema.
+The new language will take effect the next time you open Compositor. You can keep working and save your documents before closing the app.	新语言将在下次打开 Compositor 时生效。你可以继续工作，在关闭应用前保存文档。	新語言將在下次開啟 Compositor 時生效。你可以繼續工作，在關閉應用程式前儲存文件。	新しい言語は次回 Compositor を開いたときに適用されます。作業を続け、アプリを閉じる前にドキュメントを保存できます。	새 언어는 다음에 Compositor를 열 때 적용됩니다. 작업을 계속한 후 앱을 닫기 전에 문서를 저장할 수 있습니다.	Die neue Sprache wird beim nächsten Öffnen von Compositor verwendet. Sie können weiterarbeiten und Ihre Dokumente vor dem Schließen der App speichern.	La nouvelle langue sera utilisée à la prochaine ouverture de Compositor. Vous pouvez continuer à travailler et enregistrer vos documents avant de fermer l’application.	El nuevo idioma se aplicará la próxima vez que abra Compositor. Puede seguir trabajando y guardar sus documentos antes de cerrar la aplicación.	O novo idioma será aplicado na próxima vez que você abrir o Compositor. Você pode continuar trabalhando e salvar seus documentos antes de fechar o aplicativo.
+This Layer	当前图层	目前圖層	現在のレイヤー	현재 레이어	Aktuelle Ebene	Calque actif	Capa actual	Camada atual
+Tint	色调	色調	色かぶり補正	색조	Farbton	Teinte	Matiz	Colorir
+Tolerance	容差	容許度	許容値	허용치	Toleranz	Tolérance	Tolerancia	Tolerância
+Top	上	上	上	위쪽	Oben	Haut	Superior	Superior
+Tracking	字符间距	字距	トラッキング	자간	Laufweite	Approche	Tracking	Tracking
+Transform	变换	變形	変形	변형	Transformieren	Transformation	Transformar	Transformar
+Transform Layer	变换图层	變形圖層	レイヤーを変形	레이어 변형	Ebene transformieren	Transformer le calque	Transformar capa	Transformar camada
+Transform Layers	变换图层	變形圖層	レイヤーを変形	레이어 변형	Ebenen transformieren	Transformer les calques	Transformar capas	Transformar camadas
+Transform Selection	变换选区	變形選取範圍	選択範囲を変形	선택 영역 변형	Auswahl transformieren	Transformer la sélection	Transformar selección	Transformar seleção
+Transparent	透明	透明	透明	투명	Transparent	Transparent	Transparente	Transparente
+Trim	修边	修剪	トリミング	재단	Zuschneiden	Rognage	Recortar bordes	Aparar
+Type	文字	文字	文字	문자	Text	Texte	Texto	Texto
+Type tool	文字工具	文字工具	文字ツール	문자 도구	Text-Werkzeug	Outil Texte	Herramienta Texto	Ferramenta Texto
+Undo	撤销	還原	取り消し	실행 취소	Rückgängig	Annuler	Deshacer	Desfazer
+Undo %1$@	撤销%1$@	還原%1$@	%1$@を取り消す	%1$@ 실행 취소	%1$@ rückgängig	Annuler %1$@	Deshacer %1$@	Desfazer %1$@
+Ungroup Layers	取消图层编组	解散圖層群組	レイヤーのグループ化を解除	레이어 그룹 해제	Ebenengruppierung aufheben	Dissocier les calques	Desagrupar capas	Desagrupar camadas
+Uniform	平均分布	均勻	均等に分布	균일	Gleichmäßig	Uniforme	Uniforme	Uniforme
+Unlink Layer Mask	取消链接图层蒙版	取消連結圖層遮色片	レイヤーマスクのリンクを解除	레이어 마스크 연결 해제	Ebenenmaskenverknüpfung lösen	Délier le masque de fusion	Desenlazar máscara de capa	Desvincular máscara de camada
+Unsaved changes	未保存的更改	尚未儲存的變更	未保存の変更	저장하지 않은 변경 사항	Ungespeicherte Änderungen	Modifications non enregistrées	Cambios sin guardar	Alterações não salvas
+Untitled	未命名	未命名	名称未設定	제목 없음	Unbenannt	Sans titre	Sin título	Sem título
+Untitled %1$@	未命名 %1$@	未命名 %1$@	名称未設定 %1$@	제목 없음 %1$@	Unbenannt %1$@	Sans titre %1$@	Sin título %1$@	Sem título %1$@
+Up	上	上	上	위	Oben	Haut	Arriba	Cima
+Updating…	正在更新…	正在更新…	更新中…	업데이트 중…	Aktualisierung…	Mise à jour…	Actualizando…	Atualizando…
+Vectorscope	矢量示波器	向量示波器	ベクトルスコープ	벡터스코프	Vektorskop	Vectorscope	Vectorscopio	Vectorscópio
+Vertical	垂直	垂直	垂直方向	세로	Vertikal	Vertical	Vertical	Vertical
+Vibrance	自然饱和度	自然飽和度	自然な彩度	활기	Dynamik	Vibrance	Intensidad	Vibratilidade
+Vignette	晕影	暈映	周辺光量	비네팅	Vignette	Vignette	Viñeta	Vinheta
+Vignetting	晕影	暈映	周辺光量補正	비네팅	Vignettierung	Vignetage	Viñetas	Vinheta
+Vivid Light	亮光	強烈光源	ビビッドライト	선명한 라이트	Strahlendes Licht	Lumière vive	Luz intensa	Luz brilhante
+White	白色	白色	ホワイト	흰색	Weiß	Blanc	Blanco	Branco
+White Balance	白平衡	白平衡	ホワイトバランス	화이트 밸런스	Weißabgleich	Balance des blancs	Equilibrio de blancos	Equilíbrio de branco
+White Balance Selector	白平衡选择器	白平衡選取器	ホワイトバランス選択	화이트 밸런스 선택기	Weißabgleichsauswahl	Sélecteur de balance des blancs	Selector de equilibrio de blancos	Seletor de equilíbrio de branco
+Whites	白色色阶	白色	白レベル	흰색 계열	Weiß	Blancs	Blancos	Brancos
+Width	宽度	寬度	幅	폭	Breite	Largeur	Anchura	Largura
+Working…	正在处理…	正在處理…	処理中…	처리 중…	Verarbeitung…	Traitement…	Procesando…	Processando…
+Yellow	黄色	黃色	イエロー	노랑	Gelb	Jaune	Amarillo	Amarelo
+Yellows	黄色	黃色	イエロー系	노랑 계열	Gelbtöne	Jaunes	Amarillos	Amarelos
+Your changes will be lost if you don’t save them.	如果不保存，所做的更改将丢失。	若不儲存，所做的變更將會遺失。	保存しない場合、変更内容は失われます。	저장하지 않으면 변경 사항이 손실됩니다.	Wenn Sie nicht speichern, gehen Ihre Änderungen verloren.	Vos modifications seront perdues si vous ne les enregistrez pas.	Los cambios se perderán si no los guarda.	Suas alterações serão perdidas se você não as salvar.
+Zoom	缩放	縮放	ズーム	돋보기	Zoom	Zoom	Zoom	Zoom
+Zoom In	放大	放大	ズームイン	확대	Vergrößern	Zoom avant	Acercar	Mais zoom
+Zoom Out	缩小	縮小	ズームアウト	축소	Verkleinern	Zoom arrière	Alejar	Menos zoom
+Zoom tool	缩放工具	縮放工具	ズームツール	돋보기 도구	Zoom-Werkzeug	Outil Zoom	Herramienta Zoom	Ferramenta Zoom
+pixels	像素	像素	ピクセル	픽셀	Pixel	pixels	píxeles	pixels
+pixels/inch	像素/英寸	像素／英吋	ピクセル/インチ	픽셀/인치	Pixel/Zoll	pixels/pouce	píxeles/pulgada	pixels/polegada
+“%1$@” is a folder, which has no pixels of its own. Paint on a layer inside it, or on the folder’s mask.	“%1$@”是组，本身没有像素。请在组内的图层或组蒙版上绘画。	「%1$@」是群組，本身沒有像素。請在群組內的圖層或群組遮色片上繪製。	「%1$@」はグループで、独自のピクセルはありません。グループ内のレイヤーかグループマスクに描画してください。	“%1$@”은(는) 자체 픽셀이 없는 그룹입니다. 그룹 안의 레이어나 그룹 마스크에 그리세요.	„%1$@“ ist eine Gruppe ohne eigene Pixel. Malen Sie auf einer enthaltenen Ebene oder auf der Gruppenmaske.	« %1$@ » est un groupe sans pixels propres. Peignez sur un calque du groupe ou sur son masque.	«%1$@» es un grupo sin píxeles propios. Pinte en una capa del grupo o en su máscara.	“%1$@” é um grupo sem pixels próprios. Pinte em uma camada do grupo ou na máscara do grupo.
+“%1$@” is hidden, or inside a hidden folder. Show it to paint on it.	“%1$@”已隐藏，或位于隐藏的组中。请先显示它，再进行绘画。	「%1$@」已隱藏，或位於隱藏的群組中。請先顯示它再繪製。	「%1$@」は非表示、または非表示のグループ内にあります。表示してから描画してください。	“%1$@”이(가) 숨겨져 있거나 숨겨진 그룹 안에 있습니다. 표시한 후 그리세요.	„%1$@“ ist ausgeblendet oder befindet sich in einer ausgeblendeten Gruppe. Blenden Sie die Ebene zum Malen ein.	« %1$@ » est masqué ou dans un groupe masqué. Affichez-le pour y peindre.	«%1$@» está oculto o dentro de un grupo oculto. Muéstrelo para poder pintar.	“%1$@” está oculto ou dentro de um grupo oculto. Exiba-o para pintar.
+“%1$@” was changed on disk.	磁盘上的“%1$@”已被更改。	磁碟上的「%1$@」已被變更。	ディスク上の「%1$@」が変更されました。	디스크의 “%1$@”이(가) 변경되었습니다.	„%1$@“ wurde auf dem Datenträger geändert.	« %1$@ » a été modifié sur le disque.	«%1$@» se ha modificado en el disco.	“%1$@” foi alterado no disco.

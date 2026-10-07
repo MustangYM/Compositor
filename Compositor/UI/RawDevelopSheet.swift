@@ -19,7 +19,7 @@ struct RawDevelopSheet: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Develop “\(url.lastPathComponent)”").font(.title2.bold())
+            Text(L10n.tr("Develop “\(url.lastPathComponent)”")).font(.title2.bold())
             ZStack {
                 RoundedRectangle(cornerRadius: 6).fill(Color.black.opacity(0.35))
                 if let preview {
@@ -31,16 +31,16 @@ struct RawDevelopSheet: View {
             }
             .frame(width: 560, height: 340)
 
-            slider("Exposure", value: $settings.exposure, range: -3...3, unit: " EV", precision: 2)
-            slider("Temperature", value: $settings.temperature, range: 2000...12000, unit: " K", precision: 0)
-            slider("Tint", value: $settings.tint, range: -150...150, unit: "", precision: 0)
-            slider("Boost", value: $settings.boost, range: 0...1, unit: "", precision: 2)
+            slider(L10n.tr("Exposure"), value: $settings.exposure, range: -3...3, unit: " EV", precision: 2)
+            slider(L10n.tr("Temperature"), value: $settings.temperature, range: 2000...12000, unit: " K", precision: 0)
+            slider(L10n.tr("Tint"), value: $settings.tint, range: -150...150, unit: "", precision: 0)
+            slider(L10n.tr("Boost"), value: $settings.boost, range: 0...1, unit: "", precision: 2)
 
             HStack {
-                Button("Reset") { settings.reset() }.disabled(settings.isAsShot)
+                Button(L10n.tr("Reset")) { settings.reset() }.disabled(settings.isAsShot)
                 Spacer()
-                Button("Cancel") { session.finishRawDevelop(nil) }.keyboardShortcut(.cancelAction)
-                Button("Import") { session.finishRawDevelop(settings) }.keyboardShortcut(.defaultAction)
+                Button(L10n.tr("Cancel")) { session.finishRawDevelop(nil) }.keyboardShortcut(.cancelAction)
+                Button(L10n.tr("Import")) { session.finishRawDevelop(settings) }.keyboardShortcut(.defaultAction)
             }
         }
         .padding(24).fixedSize()
@@ -67,9 +67,9 @@ struct RawDevelopSheet: View {
     private func slider(_ title: String, value: Binding<Float>, range: ClosedRange<Float>,
                         unit: String, precision: Int) -> some View {
         HStack(spacing: 10) {
-            Text(title).frame(width: 90, alignment: .leading)
+            Text(title).frame(minWidth: 90, alignment: .leading)
             Slider(value: value, in: range).frame(width: 300)
-            Text(String(format: "%.\(precision)f%@", value.wrappedValue, unit))
+            Text(LocalizedNumber.format(Double(value.wrappedValue), maximumFractionDigits: precision) + unit)
                 .monospacedDigit().foregroundStyle(.secondary)
                 .frame(width: 80, alignment: .trailing)
         }

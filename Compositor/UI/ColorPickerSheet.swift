@@ -25,9 +25,9 @@ struct ColorPickerSheet: View {
                 HStack(alignment: .top, spacing: 16) {
                     preview
                     VStack(spacing: 8) {
-                        Button { finish(true) } label: { Text("OK").frame(maxWidth: .infinity) }
+                        Button { finish(true) } label: { Text(L10n.tr("OK")).frame(maxWidth: .infinity) }
                             .configuredNativeShortcut(.return)
-                        Button { finish(false) } label: { Text("Cancel").frame(maxWidth: .infinity) }
+                        Button { finish(false) } label: { Text(L10n.tr("Cancel")).frame(maxWidth: .infinity) }
                             .configuredNativeShortcut(.escape)
                     }
                     .controlSize(.large).frame(width: 90)
@@ -36,7 +36,7 @@ struct ColorPickerSheet: View {
                 fields
                 // A dialog covers the canvas, so there's nothing to sample.
                 if case .dialog = state.target {} else {
-                    Text("Click the canvas to sample")
+                    Text(L10n.tr("Click the canvas to sample"))
                         .font(.caption).foregroundStyle(.secondary).padding(.top, 8)
                 }
             }
@@ -68,7 +68,7 @@ struct ColorPickerSheet: View {
             hsb.saturation = min(1, max(0, value.location.x / fieldSize))
             hsb.brightness = 1 - min(1, max(0, value.location.y / fieldSize))
         })
-        .accessibilityLabel("Saturation and brightness")
+        .accessibilityLabel(L10n.tr("Saturation and brightness"))
     }
 
     private var hueStrip: some View {
@@ -92,8 +92,8 @@ struct ColorPickerSheet: View {
         .gesture(DragGesture(minimumDistance: 0).onChanged { value in
             hsb.hue = (1 - min(1, max(0, value.location.y / fieldSize))) * 360
         })
-        .accessibilityLabel("Hue")
-        .accessibilityValue("\(Int(hsb.hue.rounded())) degrees")
+        .accessibilityLabel(L10n.tr("Hue"))
+        .accessibilityValue(L10n.tr("\(Int(hsb.hue.rounded())) degrees"))
     }
 
     private var preview: some View {
@@ -101,22 +101,22 @@ struct ColorPickerSheet: View {
             .fill(color.swiftUI)
             .overlay { RoundedRectangle(cornerRadius: 5, style: .continuous).strokeBorder(.black.opacity(0.6), lineWidth: 1) }
             .frame(width: 64, height: 64)
-            .accessibilityLabel("New color")
+            .accessibilityLabel(L10n.tr("New color"))
     }
 
     private var fields: some View {
         Grid(alignment: .leading, horizontalSpacing: 8, verticalSpacing: 6) {
-            channelRow("R", \.red)
-            channelRow("G", \.green)
-            channelRow("B", \.blue)
+            channelRow(L10n.tr("R"), \.red)
+            channelRow(L10n.tr("G"), \.green)
+            channelRow(L10n.tr("B"), \.blue)
             GridRow {
                 Text("#").frame(width: 14, alignment: .leading)
-                TextField("Hex", text: $hexDraft)
+                TextField(L10n.tr("Hex"), text: $hexDraft)
                     .font(.system(.body, design: .monospaced))
                     .frame(width: 84)
                     .focused($hexFocused)
                     .onSubmit(commitHex)
-                    .accessibilityLabel("Hex color")
+                    .accessibilityLabel(L10n.tr("Hex color"))
             }
         }
     }
@@ -140,7 +140,7 @@ struct ColorPickerSheet: View {
                                 rgb[keyPath: channel] = CGFloat(min(255, max(0, newValue.rounded()))) / 255
                                 hsb.setRGB(rgb)
                             })
-                .accessibilityLabel(label == "R" ? "Red" : label == "G" ? "Green" : "Blue")
+                .accessibilityLabel(label == "R" ? L10n.tr("Red") : label == "G" ? L10n.tr("Green") : L10n.tr("Blue"))
         }
     }
 

@@ -46,16 +46,16 @@ struct CameraRawControls: View {
                 .padding(4)
             }
             .contextMenu {
-                Button("Histogram") { session.filterEdit?.cameraRawScopeMode = .histogram }
-                Button("Vectorscope") { session.filterEdit?.cameraRawScopeMode = .vectorscope }
+                Button(L10n.tr("Histogram")) { session.filterEdit?.cameraRawScopeMode = .histogram }
+                Button(L10n.tr("Vectorscope")) { session.filterEdit?.cameraRawScopeMode = .vectorscope }
             }
             .help(mode == .histogram
-                  ? "Tones from black on the left to white on the right: blacks, shadows, midtones, highlights, whites. Control-click to show the vectorscope."
-                  : "Hue around the wheel, saturation outward from the center. Control-click to show the histogram.")
+                  ? L10n.tr("Tones from black on the left to white on the right: blacks, shadows, midtones, highlights, whites. Control-click to show the vectorscope.")
+                  : L10n.tr("Hue around the wheel, saturation outward from the center. Control-click to show the histogram."))
             Text(readout)
                 .font(.caption.monospacedDigit())
                 .foregroundStyle(.secondary)
-                .help("Red, green, and blue of the pixel under the pointer.")
+                .help(L10n.tr("Red, green, and blue of the pixel under the pointer."))
         }
     }
 
@@ -76,8 +76,8 @@ struct CameraRawControls: View {
                 .foregroundStyle(on ? (shadows ? Color.blue : Color.red) : Color.white.opacity(0.55))
         }
         .buttonStyle(.plain)
-        .help(shadows ? "Show clipped shadows in blue on the preview." : "Show clipped highlights in red on the preview.")
-        .accessibilityLabel(shadows ? "Shadow Clipping Indicator" : "Highlight Clipping Indicator")
+        .help(shadows ? L10n.tr("Show clipped shadows in blue on the preview.") : L10n.tr("Show clipped highlights in red on the preview."))
+        .accessibilityLabel(shadows ? L10n.tr("Shadow Clipping Indicator") : L10n.tr("Highlight Clipping Indicator"))
     }
 
     private func graph(_ scope: CameraRawScope?, mode: CameraRawScopeMode) -> some View {
@@ -103,7 +103,7 @@ struct CameraRawControls: View {
                 }
             }
         }
-        .accessibilityLabel(mode == .histogram ? "RGB histogram" : "Vectorscope")
+        .accessibilityLabel(mode == .histogram ? L10n.tr("RGB histogram") : L10n.tr("Vectorscope"))
     }
 
     private func ribbon(_ bins: [Double], color: Color, peak: Double, in context: GraphicsContext, size: CGSize) {
@@ -129,23 +129,23 @@ struct CameraRawControls: View {
                         Image(systemName: expanded.contains(section) ? "chevron.down" : "chevron.right")
                             .font(.caption.weight(.semibold))
                             .frame(width: 12)
-                        Text(section.rawValue).font(.headline)
+                        Text(L10n.text(section.rawValue)).font(.headline)
                     }
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(section.rawValue)
+                .accessibilityLabel(L10n.text(section.rawValue))
                 Spacer(minLength: 0)
-                if section == .light, raw.adjustsLight { eye(shown: session.filterEdit?.showsCameraRawLight ?? true, name: "Light", group: .light) }
-                if section == .color, raw.adjustsColor { eye(shown: session.filterEdit?.showsCameraRawColor ?? true, name: "Color", group: .color) }
-                if section == .effects, raw.adjustsEffects { eye(shown: session.filterEdit?.showsCameraRawEffects ?? true, name: "Effects", group: .effects) }
-                if section == .curve, raw.adjustsCurve { eye(shown: session.filterEdit?.showsCameraRawCurve ?? true, name: "Curve", group: .curve) }
-                if section == .colorMixer, raw.adjustsMixer { eye(shown: session.filterEdit?.showsCameraRawMixer ?? true, name: "Color Mixer", group: .mixer) }
-                if section == .colorGrading, raw.adjustsGrading { eye(shown: session.filterEdit?.showsCameraRawGrading ?? true, name: "Color Grading", group: .grading) }
-                if section == .detail, raw.adjustsDetail { eye(shown: session.filterEdit?.showsCameraRawDetail ?? true, name: "Detail", group: .detail) }
-                if section == .optics, raw.adjustsOptics { eye(shown: session.filterEdit?.showsCameraRawOptics ?? true, name: "Optics", group: .optics) }
-                if section == .geometry, raw.adjustsGeometry { eye(shown: session.filterEdit?.showsCameraRawGeometry ?? true, name: "Geometry", group: .geometry) }
-                if section == .calibration, raw.adjustsCalibration { eye(shown: session.filterEdit?.showsCameraRawCalibration ?? true, name: "Calibration", group: .calibration) }
+                if section == .light, raw.adjustsLight { eye(shown: session.filterEdit?.showsCameraRawLight ?? true, name: L10n.tr("Light"), group: .light) }
+                if section == .color, raw.adjustsColor { eye(shown: session.filterEdit?.showsCameraRawColor ?? true, name: L10n.tr("Color"), group: .color) }
+                if section == .effects, raw.adjustsEffects { eye(shown: session.filterEdit?.showsCameraRawEffects ?? true, name: L10n.tr("Effects"), group: .effects) }
+                if section == .curve, raw.adjustsCurve { eye(shown: session.filterEdit?.showsCameraRawCurve ?? true, name: L10n.tr("Curve"), group: .curve) }
+                if section == .colorMixer, raw.adjustsMixer { eye(shown: session.filterEdit?.showsCameraRawMixer ?? true, name: L10n.tr("Color Mixer"), group: .mixer) }
+                if section == .colorGrading, raw.adjustsGrading { eye(shown: session.filterEdit?.showsCameraRawGrading ?? true, name: L10n.tr("Color Grading"), group: .grading) }
+                if section == .detail, raw.adjustsDetail { eye(shown: session.filterEdit?.showsCameraRawDetail ?? true, name: L10n.tr("Detail"), group: .detail) }
+                if section == .optics, raw.adjustsOptics { eye(shown: session.filterEdit?.showsCameraRawOptics ?? true, name: L10n.tr("Optics"), group: .optics) }
+                if section == .geometry, raw.adjustsGeometry { eye(shown: session.filterEdit?.showsCameraRawGeometry ?? true, name: L10n.tr("Geometry"), group: .geometry) }
+                if section == .calibration, raw.adjustsCalibration { eye(shown: session.filterEdit?.showsCameraRawCalibration ?? true, name: L10n.tr("Calibration"), group: .calibration) }
             }
             if expanded.contains(section) {
                 switch section {
@@ -166,31 +166,31 @@ struct CameraRawControls: View {
 
     private var lightControls: some View {
         VStack(alignment: .leading, spacing: 8) {
-            slider("Exposure", \.exposure, range: CameraRawSettings.exposureRange, decimals: 2, clipping: .highlights,
-                   help: "Brightens or darkens the whole picture, in stops of light. Hold Option to see clipped highlights.")
-            slider("Contrast", \.contrast, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   help: "Makes light and dark tones more or less different, mostly around the middle.")
-            slider("Highlights", \.highlights, range: CameraRawSettings.toneRange, decimals: 0, clipping: .highlights,
-                   help: "Adjusts the bright parts of the picture. Hold Option to see clipped highlights.")
-            slider("Shadows", \.shadows, range: CameraRawSettings.toneRange, decimals: 0, clipping: .shadows,
-                   help: "Adjusts the dark parts of the picture. Hold Option to see clipped shadows.")
-            slider("Whites", \.whites, range: CameraRawSettings.toneRange, decimals: 0, clipping: .highlights,
-                   help: "Sets the brightest point. Hold Option to see clipped highlights.")
-            slider("Blacks", \.blacks, range: CameraRawSettings.toneRange, decimals: 0, clipping: .shadows,
-                   help: "Sets the darkest point. Hold Option to see clipped shadows.")
+            slider(L10n.tr("Exposure"), \.exposure, range: CameraRawSettings.exposureRange, decimals: 2, clipping: .highlights,
+                   help: L10n.tr("Brightens or darkens the whole picture, in stops of light. Hold Option to see clipped highlights."))
+            slider(L10n.tr("Contrast"), \.contrast, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Makes light and dark tones more or less different, mostly around the middle."))
+            slider(L10n.tr("Highlights"), \.highlights, range: CameraRawSettings.toneRange, decimals: 0, clipping: .highlights,
+                   help: L10n.tr("Adjusts the bright parts of the picture. Hold Option to see clipped highlights."))
+            slider(L10n.tr("Shadows"), \.shadows, range: CameraRawSettings.toneRange, decimals: 0, clipping: .shadows,
+                   help: L10n.tr("Adjusts the dark parts of the picture. Hold Option to see clipped shadows."))
+            slider(L10n.tr("Whites"), \.whites, range: CameraRawSettings.toneRange, decimals: 0, clipping: .highlights,
+                   help: L10n.tr("Sets the brightest point. Hold Option to see clipped highlights."))
+            slider(L10n.tr("Blacks"), \.blacks, range: CameraRawSettings.toneRange, decimals: 0, clipping: .shadows,
+                   help: L10n.tr("Sets the darkest point. Hold Option to see clipped shadows."))
         }
     }
 
     private var colorControls: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 10) {
-                Text("White Balance").frame(minWidth: Self.labelWidth, alignment: .leading)
-                    .help("Auto balances the average color. Custom follows Temperature and Tint.")
-                Picker("White Balance", selection: Binding(get: { raw.whiteBalance }, set: setWhiteBalance)) {
-                    ForEach(CameraRawWhiteBalance.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                Text(L10n.tr("White Balance")).frame(minWidth: Self.labelWidth, alignment: .leading)
+                    .help(L10n.tr("Auto balances the average color. Custom follows Temperature and Tint."))
+                Picker(L10n.tr("White Balance"), selection: Binding(get: { raw.whiteBalance }, set: setWhiteBalance)) {
+                    ForEach(CameraRawWhiteBalance.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
                 }
                 .labelsHidden()
-                .help("Auto balances the average color. Custom follows Temperature and Tint.")
+                .help(L10n.tr("Auto balances the average color. Custom follows Temperature and Tint."))
                 Button {
                     session.filterEdit?.samplesWhiteBalance.toggle()
                     session.brushRevision += 1
@@ -199,73 +199,73 @@ struct CameraRawControls: View {
                 }
                 .buttonStyle(.borderless)
                 .tint(session.filterEdit?.samplesWhiteBalance == true ? Color.accentColor : Color.secondary)
-                .help("Click a pixel that should be neutral.")
-                .accessibilityLabel("White Balance Selector")
+                .help(L10n.tr("Click a pixel that should be neutral."))
+                .accessibilityLabel(L10n.tr("White Balance Selector"))
             }
             if session.filterEdit?.samplesWhiteBalance == true {
-                Text("Click the original layer. Click the eyedropper again to stop.")
+                Text(L10n.tr("Click the original layer. Click the eyedropper again to stop."))
                     .font(.caption).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
             }
-            slider("Temperature", \.temperature, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   track: .temperature, help: "Shifts the picture from blue to yellow.")
-            slider("Tint", \.tint, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   track: .tint, help: "Shifts the picture from green to mauve.")
-            slider("Vibrance", \.vibrance, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   track: .chroma, help: "Strengthens quiet colors more than colors that are already strong, and protects skin tones.")
-            slider("Saturation", \.saturation, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   track: .chroma, help: "Strengthens or weakens every color by the same amount.")
+            slider(L10n.tr("Temperature"), \.temperature, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   track: .temperature, help: L10n.tr("Shifts the picture from blue to yellow."))
+            slider(L10n.tr("Tint"), \.tint, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   track: .tint, help: L10n.tr("Shifts the picture from green to mauve."))
+            slider(L10n.tr("Vibrance"), \.vibrance, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   track: .chroma, help: L10n.tr("Strengthens quiet colors more than colors that are already strong, and protects skin tones."))
+            slider(L10n.tr("Saturation"), \.saturation, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   track: .chroma, help: L10n.tr("Strengthens or weakens every color by the same amount."))
         }
     }
 
     private var effectsControls: some View {
         VStack(alignment: .leading, spacing: 8) {
-            slider("Texture", \.texture, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   help: "Adds or softens small detail.")
-            slider("Clarity", \.clarity, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   help: "Adds or softens contrast along broader shapes.")
-            slider("Dehaze", \.dehaze, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   help: "Clears haze when raised, and adds haze when lowered.")
-            Text("Glow").font(.subheadline)
-            slider("Glow", \.glow, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                   help: "Spreads a glow from the bright areas.")
-            Picker("Style", selection: Binding(get: { raw.glowStyle }, set: { style in update { $0.cameraRaw.glowStyle = style } })) {
-                ForEach(CameraRawGlowStyle.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            slider(L10n.tr("Texture"), \.texture, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Adds or softens small detail."))
+            slider(L10n.tr("Clarity"), \.clarity, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Adds or softens contrast along broader shapes."))
+            slider(L10n.tr("Dehaze"), \.dehaze, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Clears haze when raised, and adds haze when lowered."))
+            Text(L10n.tr("Glow")).font(.subheadline)
+            slider(L10n.tr("Glow"), \.glow, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Spreads a glow from the bright areas."))
+            Picker(L10n.tr("Style"), selection: Binding(get: { raw.glowStyle }, set: { style in update { $0.cameraRaw.glowStyle = style } })) {
+                ForEach(CameraRawGlowStyle.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
             }
-            .help("Diffusion is soft and wide, Bloom is tighter, and Halation is a red fringe.")
+            .help(L10n.tr("Diffusion is soft and wide, Bloom is tighter, and Halation is a red fringe."))
             VStack(alignment: .leading, spacing: 8) {
-                slider("Range", \.glowRange, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                       help: "Chooses how bright an area must be to glow. Has no effect until Glow is raised.")
-                slider("Spread", \.glowSpread, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                       help: "Sets how far the glow reaches. Has no effect until Glow is raised.")
-                slider("Warmth", \.glowWarmth, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                       help: "Shifts the glow from cool to warm. Halation stays red. Has no effect until Glow is raised.")
+                slider(L10n.tr("Range"), \.glowRange, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                       help: L10n.tr("Chooses how bright an area must be to glow. Has no effect until Glow is raised."))
+                slider(L10n.tr("Spread"), \.glowSpread, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                       help: L10n.tr("Sets how far the glow reaches. Has no effect until Glow is raised."))
+                slider(L10n.tr("Warmth"), \.glowWarmth, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                       help: L10n.tr("Shifts the glow from cool to warm. Halation stays red. Has no effect until Glow is raised."))
             }
             .padding(.leading, 16)
-            Text("Vignette").font(.subheadline)
-            slider("Amount", \.vignetteAmount, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                   help: "Darkens or lightens the edges. The center does not change.")
-            Picker("Style", selection: Binding(get: { raw.vignetteStyle }, set: { style in update { $0.cameraRaw.vignetteStyle = style } })) {
-                ForEach(CameraRawVignetteStyle.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+            Text(L10n.tr("Vignette")).font(.subheadline)
+            slider(L10n.tr("Amount"), \.vignetteAmount, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Darkens or lightens the edges. The center does not change."))
+            Picker(L10n.tr("Style"), selection: Binding(get: { raw.vignetteStyle }, set: { style in update { $0.cameraRaw.vignetteStyle = style } })) {
+                ForEach(CameraRawVignetteStyle.allCases, id: \.self) { Text(L10n.text($0.rawValue)).tag($0) }
             }
-            .help("Highlight Priority protects bright edges. Color Priority also reduces color. Paint Overlay covers the edges evenly.")
+            .help(L10n.tr("Highlight Priority protects bright edges. Color Priority also reduces color. Paint Overlay covers the edges evenly."))
             VStack(alignment: .leading, spacing: 8) {
-                slider("Midpoint", \.vignetteMidpoint, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                       reset: 50, help: "Sets where the vignette begins, from the center outward.")
-                slider("Roundness", \.vignetteRoundness, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
-                       help: "Makes the vignette rounder or more square.")
-                slider("Feather", \.vignetteFeather, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                       reset: 50, help: "Softens the edge of the vignette.")
-                slider("Highlights", \.vignetteHighlights, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                       help: "Protects bright pixels while a dark vignette is applied. Used by Highlight Priority.")
+                slider(L10n.tr("Midpoint"), \.vignetteMidpoint, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                       reset: 50, help: L10n.tr("Sets where the vignette begins, from the center outward."))
+                slider(L10n.tr("Roundness"), \.vignetteRoundness, range: CameraRawSettings.toneRange, decimals: 0, clipping: nil,
+                       help: L10n.tr("Makes the vignette rounder or more square."))
+                slider(L10n.tr("Feather"), \.vignetteFeather, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                       reset: 50, help: L10n.tr("Softens the edge of the vignette."))
+                slider(L10n.tr("Highlights"), \.vignetteHighlights, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                       help: L10n.tr("Protects bright pixels while a dark vignette is applied. Used by Highlight Priority."))
             }
             .padding(.leading, 16)
-            Text("Grain").font(.subheadline)
-            slider("Amount", \.grainAmount, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                   help: "Adds film grain, strongest in the middle tones.")
-            slider("Size", \.grainSize, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                   reset: 25, help: "Makes the grain coarser or finer.")
-            slider("Roughness", \.grainRoughness, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
-                   reset: 50, help: "Makes the grain smoother or more uneven.")
+            Text(L10n.tr("Grain")).font(.subheadline)
+            slider(L10n.tr("Amount"), \.grainAmount, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                   help: L10n.tr("Adds film grain, strongest in the middle tones."))
+            slider(L10n.tr("Size"), \.grainSize, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                   reset: 25, help: L10n.tr("Makes the grain coarser or finer."))
+            slider(L10n.tr("Roughness"), \.grainRoughness, range: CameraRawSettings.unitRange, decimals: 0, clipping: nil,
+                   reset: 50, help: L10n.tr("Makes the grain smoother or more uneven."))
         }
     }
 
@@ -288,8 +288,8 @@ struct CameraRawControls: View {
             Image(systemName: shown ? "eye" : "eye.slash")
         }
         .buttonStyle(.borderless)
-        .help(shown ? "Hide \(name) in the preview" : "Show \(name) in the preview")
-        .accessibilityLabel(shown ? "Hide \(name)" : "Show \(name)")
+        .help(shown ? L10n.tr("Hide \(name) in the preview") : L10n.tr("Show \(name) in the preview"))
+        .accessibilityLabel(shown ? L10n.tr("Hide \(name)") : L10n.tr("Show \(name)"))
     }
 
     private func slider(_ title: String, _ key: WritableKeyPath<CameraRawSettings, Double>, range: ClosedRange<Double>,

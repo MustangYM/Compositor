@@ -18,12 +18,12 @@ struct NewCanvasSheet: View {
         VStack(alignment: .leading, spacing: 24) {
             VStack(spacing: 14) {
                 HStack {
-                    Text("New canvas").font(.title2.weight(.semibold))
+                    Text(L10n.tr("New canvas")).font(.title2.weight(.semibold))
                     Spacer()
                     // Preset sizes, tucked into a More button; the size in use is checked.
                     Menu {
-                        Picker("Size", selection: preset) {
-                            Text("Custom").tag(CanvasPreset?.none)
+                        Picker(L10n.tr("Size"), selection: preset) {
+                            Text(L10n.tr("Custom")).tag(CanvasPreset?.none)
                             ForEach(CanvasPreset.groups.indices, id: \.self) { group in
                                 Divider()
                                 ForEach(CanvasPreset.groups[group]) { Text($0.title).tag(CanvasPreset?.some($0)) }
@@ -42,22 +42,22 @@ struct NewCanvasSheet: View {
                             .padding(.trailing, -10)
                     }
                     .menuStyle(.button).buttonStyle(.plain).menuIndicator(.hidden).fixedSize()
-                    .help("Preset sizes for screens and common formats")
-                    .accessibilityLabel("Preset sizes")
+                    .help(L10n.tr("Preset sizes for screens and common formats"))
+                    .accessibilityLabel(L10n.tr("Preset sizes"))
                 }
             }
             HStack(spacing: 16) {
-                dimension("Width", text: $width, field: .width)
+                dimension(L10n.tr("Width"), text: $width, field: .width)
                 Image(systemName: "multiply").foregroundStyle(.tertiary).padding(.top, 20)
-                dimension("Height", text: $height, field: .height)
+                dimension(L10n.tr("Height"), text: $height, field: .height)
             }
-            Text(valid ? "Transparent canvas · sRGB" : "Enter whole numbers from 1 to \(DocumentLimits.maxSide.formatted()) pixels.")
+            Text(valid ? L10n.tr("Transparent canvas · sRGB") : L10n.tr("Enter whole numbers from 1 to \(DocumentLimits.maxSide.formatted()) pixels."))
                 .font(.callout).foregroundStyle(valid ? Color.secondary : Color.orange)
             HStack(spacing: 10) {
-                Button("Open project") { onOpen?() }.buttonStyle(.bordered)
-                Button("Import image") { session.showsImporter = true }.buttonStyle(.bordered)
+                Button(L10n.tr("Open project")) { onOpen?() }.buttonStyle(.bordered)
+                Button(L10n.tr("Import image")) { session.showsImporter = true }.buttonStyle(.bordered)
                 Spacer()
-                Button("Create canvas") {
+                Button(L10n.tr("Create canvas")) {
                     guard let w = CanvasDocument.validDimension(width),
                           let h = CanvasDocument.validDimension(height) else { return }
                     if let onCreate { onCreate(w, h) }
@@ -110,8 +110,8 @@ struct NewCanvasSheet: View {
             HStack {
                 TextField(title, text: text).textFieldStyle(.plain)
                     .focused($focusedField, equals: field)
-                    .accessibilityIdentifier(title.lowercased() + "Input")
-                Text("px").foregroundStyle(.secondary)
+                    .accessibilityIdentifier(field == .width ? "widthInput" : "heightInput")
+                Text(L10n.tr("px")).foregroundStyle(.secondary)
             }
             .padding(12).background(.quaternary.opacity(0.5), in: RoundedRectangle(cornerRadius: 7))
         }
@@ -132,17 +132,17 @@ struct CanvasPreset: Identifiable, Hashable {
             CanvasPreset(title: "1080p", width: 1920, height: 1080),
         ],
         [
-            CanvasPreset(title: "iPhone 18 Pro", width: 1206, height: 2622),
-            CanvasPreset(title: "iPhone 18 Pro Max", width: 1320, height: 2868),
-            CanvasPreset(title: "MacBook Pro 14\"", width: 3024, height: 1964),
-            CanvasPreset(title: "MacBook Pro 16\"", width: 3456, height: 2234),
-            CanvasPreset(title: "Studio Display", width: 5120, height: 2880),
+            CanvasPreset(title: L10n.tr("iPhone 18 Pro"), width: 1206, height: 2622),
+            CanvasPreset(title: L10n.tr("iPhone 18 Pro Max"), width: 1320, height: 2868),
+            CanvasPreset(title: L10n.tr("MacBook Pro 14\""), width: 3024, height: 1964),
+            CanvasPreset(title: L10n.tr("MacBook Pro 16\""), width: 3456, height: 2234),
+            CanvasPreset(title: L10n.tr("Studio Display"), width: 5120, height: 2880),
         ],
         [
-            CanvasPreset(title: "Instagram Square", width: 1080, height: 1080),
-            CanvasPreset(title: "Instagram Portrait", width: 1080, height: 1350),
-            CanvasPreset(title: "Instagram Story", width: 1080, height: 1920),
-            CanvasPreset(title: "YouTube Thumb", width: 1080, height: 608),
+            CanvasPreset(title: L10n.tr("Instagram Square"), width: 1080, height: 1080),
+            CanvasPreset(title: L10n.tr("Instagram Portrait"), width: 1080, height: 1350),
+            CanvasPreset(title: L10n.tr("Instagram Story"), width: 1080, height: 1920),
+            CanvasPreset(title: L10n.tr("YouTube Thumb"), width: 1080, height: 608),
         ],
     ]
     static let all = groups.flatMap { $0 }
